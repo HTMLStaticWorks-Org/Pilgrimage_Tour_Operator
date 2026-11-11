@@ -1,36 +1,620 @@
-const navItems=[["Home","index.html"],["Premium journeys","home-premium.html"],["Destinations","destinations.html"],["Tour packages","packages.html"],["Itineraries","itineraries.html"],["About","about.html"],["Contact","contact.html"]];
+const navItems=[
+  ["Home","index.html"],
+  ["Home 2","home-premium.html"],
+  ["Destinations","destinations.html"],
+  ["Tour packages","packages.html"],
+  ["Itineraries","itineraries.html"],
+  ["About","about.html"],
+  ["Contact","contact.html"]
+];
 const current=location.pathname.split("/").pop()||"index.html";
-document.getElementById("site-header").innerHTML=`<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html" aria-label="SACRIDER home"><img src="assets/sacrider-horizontal-logo.png" alt="SACRIDER — Every Faith. Every Sacred Journey."></a><button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open navigation">☰</button><nav class="nav-links" id="nav-links">${navItems.map(([n,u])=>`<a class="${current===u?'active':''}" href="${u}">${n}</a>`).join("")}</nav><div class="nav-tools"><button class="icon-btn" id="theme-toggle" title="Toggle light and dark mode" aria-label="Toggle theme">☼</button><button class="icon-btn" id="direction-toggle" title="Switch LTR / RTL" aria-label="Switch text direction">⇄</button></div></div></header>`;
-document.getElementById("site-footer").innerHTML=`<footer class="site-footer"><div class="footer-inner"><div><img class="footer-logo" src="assets/sacrider-horizontal-logo.png" alt="SACRIDER"><p>Every Faith. Every Sacred Journey.</p><p>An inclusive concept for discovering sacred places and planning thoughtful journeys.</p></div><div><h4>EXPLORE</h4><div class="footer-links"><a href="destinations.html">Sacred destinations</a><a href="packages.html">Tour packages</a><a href="itineraries.html">Itinerary ideas</a><a href="home-premium.html">Private journeys</a></div></div><div><h4>ABOUT & ENQUIRIES</h4><div class="footer-links"><a href="about.html">About SACRIDER</a><a href="contact.html">Contact us</a><a href="index.html">Home</a></div><p>Business contact details to be added after verification.</p></div></div><div class="copyright">© ${new Date().getFullYear()} SACRIDER. Content and journey details require verification before publication.</div></footer>`;
+
+document.getElementById("site-header").innerHTML=`
+<header class="site-header">
+  <div class="top-operator-bar">
+    <div class="operator-bar-inner">
+      <div class="operator-credentials">
+        <span>✦ ACREDITED GLOBAL PILGRIMAGE OPERATOR</span>
+        <span class="dot-sep">•</span>
+        <span>VERIFIED TEMPLE TRUST & SANCTUM PERMITS</span>
+        <span class="dot-sep">•</span>
+        <span>MULTI-FAITH CONCIERGE DESK</span>
+      </div>
+      <div class="operator-contact-quick">
+        <a href="contact.html" class="quick-call"><span>📞 Private Concierge:</span> +1 (800) 722-7433</a>
+        <span class="dot-sep">•</span>
+        <span class="lang-cur">🌐 EN | 24/7 ACTIVE TRAVEL SUPPORT</span>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="SACRIDER home">
+      <img src="assets/sacrider-horizontal-logo.png" alt="SACRIDER — Every Faith. Every Sacred Journey.">
+    </a>
+    <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-links" id="nav-links">
+      ${navItems.map(([n,u])=>`<a class="${(current===u || (current==='' && u==='index.html'))?'active':''}" href="${u}">${n}</a>`).join("")}
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="theme-toggle" title="Toggle light and dark mode" aria-label="Toggle theme">☼</button>
+      <button class="icon-btn" id="direction-toggle" title="Switch LTR / RTL" aria-label="Switch text direction">⇄</button>
+      <a class="btn primary sm header-cta" href="contact.html?interest=Bespoke%20Pilgrimage%20Proposal">Request Proposal</a>
+    </div>
+  </div>
+</header>`;
+
+document.getElementById("site-footer").innerHTML=`
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img class="footer-logo" src="assets/sacrider-horizontal-logo.png" alt="SACRIDER">
+      <p class="footer-tagline"><strong>Every Faith. Every Sacred Journey.</strong></p>
+      <p class="footer-desc">The world’s premier private pilgrimage tour operator and sacred heritage discovery platform. Curating reverent, ultra-bespoke journeys honoring the sanctity, customs, and deep spiritual heritage of every holy destination.</p>
+      <div class="footer-trust-badges">
+        <span>✦ Licensed World Heritage & Faith Tour Operator</span>
+        <span>✦ Direct Liaison with Official Temple Trusts & Shrines</span>
+        <span>✦ 100% Verified Elder-Safe & Accessible Logistics</span>
+        <span>✦ 24/7 Dedicated On-Ground Physician Liaison</span>
+      </div>
+    </div>
+    <div>
+      <h4>SACRED EXPEDITIONS</h4>
+      <div class="footer-links">
+        <a href="destinations.html">Global Sacred Directory (1,000+ Target)</a>
+        <a href="packages.html">Curated Pilgrimage Packages & Tiers</a>
+        <a href="itineraries.html">50 Master Itinerary Blueprints</a>
+        <a href="home-premium.html">Home 2 — Private Bespoke Journeys</a>
+        <a href="index.html">Home 1 — Global Heritage Portal</a>
+      </div>
+    </div>
+    <div>
+      <h4>CONCIERGE & ADVISORY</h4>
+      <div class="footer-links">
+        <a href="about.html">About SACRIDER & Advisory Board</a>
+        <a href="contact.html">Request a Bespoke Proposal</a>
+        <a href="contact.html?interest=Group%20pilgrimage">Group Pilgrimage Coordination</a>
+        <a href="contact.html?interest=Senior-friendly%20slower-paced">Senior & Mobility Care Desk</a>
+      </div>
+      <div class="operator-service-card">
+        <strong>VIP PILGRIMAGE CONCIERGE</strong>
+        <p>Direct lines open daily for private families and spiritual leaders.<br>Email: <b>concierge@sacrider.org</b></p>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div>© ${new Date().getFullYear()} SACRIDER Luxury Pilgrimage Expeditions. All Rights Reserved. Preserving reverence, promoting intercultural understanding.</div>
+    <div class="footer-sub-links"><a href="about.html">Sacred Charter</a> · <a href="contact.html">Travel Advisory</a> · <a href="home-premium.html">Home 2 Private</a></div>
+  </div>
+</footer>`;
+
 const body=document.body,html=document.documentElement;
 if(localStorage.getItem("sacrider-theme")==="dark")body.classList.add("dark");
 if(localStorage.getItem("sacrider-dir")==="rtl")html.dir="rtl";
-document.getElementById("theme-toggle").addEventListener("click",()=>{body.classList.toggle("dark");localStorage.setItem("sacrider-theme",body.classList.contains("dark")?"dark":"light")});
-document.getElementById("direction-toggle").addEventListener("click",()=>{html.dir=html.dir==="rtl"?"ltr":"rtl";localStorage.setItem("sacrider-dir",html.dir)});
-document.getElementById("menu-toggle").addEventListener("click",()=>document.getElementById("nav-links").classList.toggle("open"));
+
+document.getElementById("theme-toggle")?.addEventListener("click",()=>{
+  body.classList.toggle("dark");
+  localStorage.setItem("sacrider-theme",body.classList.contains("dark")?"dark":"light");
+});
+document.getElementById("direction-toggle")?.addEventListener("click",()=>{
+  html.dir=html.dir==="rtl"?"ltr":"rtl";
+  localStorage.setItem("sacrider-dir",html.dir);
+});
+document.getElementById("menu-toggle")?.addEventListener("click",()=>document.getElementById("nav-links")?.classList.toggle("open"));
+
 const destinations=[
-{name:"Varanasi",country:"India",faith:"Hindu",type:"Sacred landscape",summary:"A historic city on the Ganges, associated with Hindu pilgrimage and living religious traditions."},
-{name:"Tirupati",country:"India",faith:"Hindu",type:"Temple",summary:"A major South Indian pilgrimage destination centred on the Venkateswara temple tradition."},
-{name:"Bodh Gaya",country:"India",faith:"Buddhist",type:"Sacred landscape",summary:"A central Buddhist pilgrimage place associated with the Buddha's enlightenment."},
-{name:"Golden Temple (Harmandir Sahib)",country:"India",faith:"Sikh",type:"Gurudwara",summary:"The principal Sikh gurdwara in Amritsar and an important centre of Sikh worship."},
-{name:"Ajmer Sharif Dargah",country:"India",faith:"Islam",type:"Shrine",summary:"A renowned Sufi shrine associated with Moinuddin Chishti in Ajmer."},
-{name:"Vatican City",country:"Vatican City",faith:"Christian",type:"Church",summary:"A major centre of the Roman Catholic Church, including St Peter's Basilica."},
-{name:"Jerusalem",country:"Israel / Palestine",faith:"Interfaith",type:"Sacred landscape",summary:"A city of profound significance to Judaism, Christianity and Islam; access and local conditions require careful checking."},
-{name:"Lumbini",country:"Nepal",faith:"Buddhist",type:"Sacred landscape",summary:"Traditionally recognised as the birthplace of Siddhartha Gautama, the Buddha."},
-{name:"Shikoku Pilgrimage",country:"Japan",faith:"Buddhist",type:"Sacred landscape",summary:"A historic circuit connecting 88 temples associated with the Buddhist monk Kūkai."},
-{name:"Mount Kailash",country:"China (Tibet)",faith:"Hindu",type:"Sacred landscape",summary:"A sacred mountain revered in multiple traditions; permits, access and conditions must be checked."},
-{name:"Bahá’í Gardens",country:"Israel",faith:"Bahá’í",type:"Shrine",summary:"A major Bahá’í sacred and heritage site in Haifa; visitor arrangements should be checked."},
-{name:"Tower of Silence heritage context",country:"India / Iran",faith:"Zoroastrian",type:"Sacred landscape",summary:"Zoroastrian heritage sites vary in access; community guidance and local rules are essential."}
+  {
+    name:"Varanasi",
+    country:"India",
+    faith:"Hindu",
+    type:"Sacred landscape",
+    image:"assets/images/varanasi.jpg",
+    season:"Oct – Mar (Dev Deepawali & Mahashivratri)",
+    duration:"4–6 Days",
+    rating:"★ 4.98 (340+ Pilgrims)",
+    vipAccess:"VIP Kashi Vishwanath & Private Ghat Bajra",
+    badge:"Holy River & Ancient Ghats",
+    inclusions:"Private Wooden Bajra • Sanskrit Scholar Guide • Taj Ganges Heritage Haven",
+    dressCode:"Modest traditional attire; barefoot on sacred ghats and within temple complexes.",
+    highlights:["Ganga Aarti at Dashashwamedh Ghat","Kashi Vishwanath Corridor VIP Darshan","Dawn boat pilgrimage with Vedic chants","Sarnath Buddhist Deer Park excursion"],
+    summary:"One of the oldest continuously inhabited sacred cities in the world, reverently lining the sacred River Ganges. A profound center of prayer, life rituals, and moksha."
+  },
+  {
+    name:"Tirupati (Sri Venkateswara)",
+    country:"India",
+    faith:"Hindu",
+    type:"Temple",
+    image:"assets/images/tirupati.jpg",
+    season:"Sep – Feb (Pleasant weather, Brahmotsavam)",
+    duration:"3–4 Days",
+    rating:"★ 4.99 (480+ Pilgrims)",
+    vipAccess:"Sanctioned Special Entry SED Darshan Pass",
+    badge:"Seven Sacred Hills",
+    inclusions:"Pre-booked Special Entry Token • Private Hill Transfer • Sacred Laddu Prasadam Box",
+    dressCode:"Strict traditional dhoti/sari dress code; footwear strictly prohibited inside temple hill precincts.",
+    highlights:["Lord Venkateswara Sanctum Darshan","Seven Sacred Hills (Seshachalam) Circuit","Sacred Tirupati Laddu Prasadam","Silathoranam Geological Landmark"],
+    summary:"The world's most visited sacred pilgrimage shrine, situated atop the scenic Tirumala Hills in Andhra Pradesh, venerated as the earthly home of Lord Venkateswara."
+  },
+  {
+    name:"Bodh Gaya",
+    country:"India",
+    faith:"Buddhist",
+    type:"Sacred landscape",
+    image:"assets/images/bodhgaya.jpg",
+    season:"Oct – Mar (Annual Kagyu Monlam & Kalachakra)",
+    duration:"3–5 Days",
+    rating:"★ 4.97 (220+ Pilgrims)",
+    vipAccess:"Dawn Meditation Pass under Sacred Bodhi Tree",
+    badge:"Enlightenment Sanctum",
+    inclusions:"Senior Monastic Scholar • Private Butter Lamp Ceremony • 5★ Heritage Serenity Stay",
+    dressCode:"White or modest clothing; remove footwear before entering the UNESCO Mahabodhi complex.",
+    highlights:["Mahabodhi Temple UNESCO World Heritage","Sacred Bodhi Tree & Diamond Throne (Vajrasana)","International Buddhist Monasteries (Thai, Tibetan, Japanese)","Sujata Kuti Ancient Stupa Trail"],
+    summary:"The most sacred pilgrimage ground in Buddhism, where Siddhartha Gautama meditated beneath the Bodhi Tree and attained complete Enlightenment."
+  },
+  {
+    name:"Golden Temple (Harmandir Sahib)",
+    country:"India",
+    faith:"Sikh",
+    type:"Gurudwara",
+    image:"assets/images/goldentemple.jpg",
+    season:"Oct – Mar (Baisakhi & Guru Nanak Gurpurab)",
+    duration:"3–4 Days",
+    rating:"★ 5.0 (520+ Pilgrims)",
+    vipAccess:"Guided Palki Sahib Ceremony & VIP Langar Seva",
+    badge:"Sanctuary of Universal Equality",
+    inclusions:"Dedicated Sikh Historian • Private Parikrama Escort • Heritage Haveli Suite",
+    dressCode:"Head must remain covered at all times; barefoot with foot-washing ritual at entry pool; tobacco/alcohol strictly forbidden.",
+    highlights:["Harmandir Sahib Golden Sanctum Darshan","Langar (24/7 holy community kitchen seva)","Amrit Sarovar Holy Pool Circumambulation","Akal Takht historical supreme seat"],
+    summary:"The spiritual heart of Sikhism in Amritsar, welcoming all people regardless of caste, faith, or background with open doors in all four cardinal directions."
+  },
+  {
+    name:"Ajmer Sharif Dargah",
+    country:"India",
+    faith:"Islam",
+    type:"Shrine",
+    image:"assets/images/ajmer.jpg",
+    season:"Oct – Apr (Annual Urs of Khwaja Moinuddin Chishti)",
+    duration:"2–3 Days",
+    rating:"★ 4.95 (190+ Pilgrims)",
+    vipAccess:"Hereditary Khadim Escort & Courtyard Qawwali Seating",
+    badge:"Sufi Sanctuary of Harmony",
+    inclusions:"Private Chhati Sharif Pass • Degs Blessed Niyaz Distribution • Chauffeur Driven SUV",
+    dressCode:"Modest attire covering arms and legs; head scarves or caps compulsory; footwear deposited at designated counters.",
+    highlights:["Mazar of Khwaja Garib Nawaz blessing","Chhati Sharif Monthly Observance","Historic Mughal Cauldrons (Degs) food sharing","Soulful evening Qawwali mehfils"],
+    summary:"The revered 13th-century Sufi shrine of Khwaja Moinuddin Chishti, renowned across South Asia as a beacon of compassion, spiritual solace, and interfaith fellowship."
+  },
+  {
+    name:"Vatican City & St. Peter's",
+    country:"Vatican City",
+    faith:"Christian",
+    type:"Church",
+    image:"assets/images/vatican.jpg",
+    season:"Apr – May & Sep – Oct (Spring & Autumn)",
+    duration:"3–5 Days",
+    rating:"★ 4.98 (410+ Pilgrims)",
+    vipAccess:"Papal Audience Reserved Invitation & Early Crypt Entry",
+    badge:"Apostolic Seat & Holy See",
+    inclusions:"Vatican Accredited Art Historian • Private Early Sistine Chapel • 5★ Hotel de Russie Stay",
+    dressCode:"Strict Vatican modesty rules: shoulders and knees covered; no sleeveless tops or short skirts.",
+    highlights:["St. Peter’s Basilica, Cupola & Apostolic Crypt","Wednesday Papal General Audience Blessing","Sistine Chapel & Vatican Secret Archives","Tomb of the Apostle Saint Peter"],
+    summary:"The universal center of the Roman Catholic Church, built over the tomb of Saint Peter, featuring breathtaking Renaissance art, sacred basilicas, and living papal tradition."
+  },
+  {
+    name:"Jerusalem Old City",
+    country:"Israel / Palestine",
+    faith:"Interfaith",
+    type:"Sacred landscape",
+    image:"assets/images/jerusalem.jpg",
+    season:"Mar – May & Oct – Nov (Mild temperatures)",
+    duration:"5–8 Days",
+    rating:"★ 4.99 (380+ Pilgrims)",
+    vipAccess:"Western Wall Tunnels Private Access & Sepulchre Tour",
+    badge:"Cradle of Abrahamic Faiths",
+    inclusions:"Dual-Perspective Theologian Guide • Private King David Hotel Suite • VIP Border Escort",
+    dressCode:"Modest dress across all quarters; head coverings required at specific holy sites (kippah, scarf).",
+    highlights:["Western Wall (Kotel) private prayer","Church of the Holy Sepulchre & Calvary","Dome of the Rock & Al-Aqsa historical compound","Via Dolorosa (Stations of the Cross) dawn walk"],
+    summary:"A profound, ancient city sacred to Judaism, Christianity, and Islam for millennia. A living sanctuary where three world faiths pray within walking distance."
+  },
+  {
+    name:"Lumbini",
+    country:"Nepal",
+    faith:"Buddhist",
+    type:"Sacred landscape",
+    image:"assets/images/lumbini.jpg",
+    season:"Oct – Mar (Clear Himalayan skies)",
+    duration:"3–4 Days",
+    rating:"★ 4.96 (160+ Pilgrims)",
+    vipAccess:"Private Monastic Garden Chanting & Ashoka Marker Access",
+    badge:"Birthplace of the Buddha",
+    inclusions:"Monastic Liaison Scholar • Private Monastic Zone Electric Cart • Boutique Eco-Lodge",
+    dressCode:"Comfortable, respectful clothing; footwear removed inside the sacred garden enclosure.",
+    highlights:["Maya Devi Temple & Historic Marker Stone","Ashoka Pillar (dating back to 249 BCE)","Sacred Puskarini holy bathing pond","East & West International Monastic Sanctuaries"],
+    summary:"A UNESCO World Heritage sanctuary in the Terai plains of Nepal, preserved as the peaceful birthplace of Siddhartha Gautama in the 6th century BCE."
+  },
+  {
+    name:"Shikoku 88 Temple Circuit",
+    country:"Japan",
+    faith:"Buddhist",
+    type:"Sacred landscape",
+    image:"assets/images/shikoku.jpg",
+    season:"Spring (Mar – May) & Autumn (Sep – Nov)",
+    duration:"10–45 Days (Full or Curated Stages)",
+    rating:"★ 4.99 (140+ Pilgrims)",
+    vipAccess:"Curated Shukubo Monastic Temple Stays & Henro Master",
+    badge:"Way of Kōbō Daishi",
+    inclusions:"Full Henro Pilgrim Attire & Staff • Private Luggage Forwarding • Hot Spring Ryokan Stays",
+    dressCode:"Henro pilgrim vest (byakue), sedge hat, and walking staff; respectful temple hall decorum.",
+    highlights:["Ryozenji Temple (Station 1 consecrated start)","Okuboji Temple (Station 88 completion)","Scenic coastal Pacific walking stages","Traditional Osame-fuda pilgrim exchange ritual"],
+    summary:"An ancient 1,200 km pilgrimage loop visiting 88 sacred Buddhist temples connected with the revered 8th-century monk Kōbō Daishi (Kūkai) across Shikoku island."
+  },
+  {
+    name:"Mount Kailash & Lake Manasarovar",
+    country:"China (Tibet)",
+    faith:"Hindu",
+    type:"Sacred landscape",
+    image:"assets/images/kailash.jpg",
+    season:"May – Sep (High-altitude pass accessibility)",
+    duration:"14–18 Days",
+    rating:"★ 4.98 (110+ Pilgrims)",
+    vipAccess:"High-Altitude Medical Team & Private Parikrama Sherpas",
+    badge:"Axis Mundi & Cosmic Mountain",
+    inclusions:"Medical Officer with Hyperbaric Chamber • 4x4 Land Cruisers • Private Kitchen Yurt",
+    dressCode:"Warm, multi-layer alpine trekking gear; extreme high-altitude permits and medical clearance mandatory.",
+    highlights:["52 km Sacred Parikrama (Kora) around Mount Kailash","Crossing the high Dolma La Pass (5,630m)","Lake Manasarovar sacred waters holy dip","Ancient Dirapuk & Zutulpuk Gompas"],
+    summary:"The revered 6,638m pyramidal mountain venerated in Hinduism as Lord Shiva's abode, in Buddhism as Mount Meru, and in Jainism and Bon as their primordial sacred summit."
+  },
+  {
+    name:"Bahá’í Terraced Gardens & Shrine",
+    country:"Israel",
+    faith:"Bahá’í",
+    type:"Shrine",
+    image:"assets/images/bahai.jpg",
+    season:"All year (Optimal Oct – Apr)",
+    duration:"2–3 Days",
+    rating:"★ 4.97 (175+ Pilgrims)",
+    vipAccess:"Official World Centre Curated Garden Escort",
+    badge:"Gardens of Unity & Light",
+    inclusions:"Private Horticulture & Faith Historian • Luxury Mount Carmel Suite • Chauffeur",
+    dressCode:"Modest clothing; shoulders and knees covered; quiet contemplation observed in gardens.",
+    highlights:["Shrine of the Báb golden dome","19 Terraced hanging gardens on Mount Carmel","Bahá’í World Centre historic archive","Panoramic views overlooking Haifa Bay"],
+    summary:"A world heritage masterpiece of geometry, horticulture, and spiritual light on the slopes of Mount Carmel, representing peace, human unity, and contemplation."
+  },
+  {
+    name:"Historic Zoroastrian Fire Temples & Towers",
+    country:"India / Iran",
+    faith:"Zoroastrian",
+    type:"Sacred landscape",
+    image:"assets/images/zoroastrian.jpg",
+    season:"Nov – Feb (Pleasant exploration weather)",
+    duration:"4–6 Days",
+    rating:"★ 4.95 (85+ Pilgrims)",
+    vipAccess:"Parsi Community Liaison & Udvada Heritage Darshan",
+    badge:"Eternal Consecrated Flame",
+    inclusions:"Community Historian Guide • Heritage Parsi Bungalow Lodging • Private AC Chauffeur",
+    dressCode:"Community access rules apply; white attire and cap (topi) for consecrated areas; local guidance required.",
+    highlights:["Udvada Atash Behram (India) pilgrimage","Yazd Historic Fire Temple (Iran) sacred flame","Chak Chak desert mountain sanctuary","Ancient Dokhma heritage landmarks"],
+    summary:"Ancient sanctuaries of Asha (truth) and living light, preserving the sacred fire traditions and venerable philosophical wisdom of Zarathustra."
+  }
 ];
-function renderDestinations(){const host=document.getElementById("destination-results");if(!host)return;const q=(document.getElementById("destination-search").value||"").toLowerCase(),f=document.getElementById("faith-filter").value,t=document.getElementById("type-filter").value;const list=destinations.filter(d=>(!q||`${d.name} ${d.country} ${d.summary}`.toLowerCase().includes(q))&&(!f||d.faith===f)&&(!t||d.type===t));host.innerHTML=list.length?list.map((d,i)=>`<article class="destination-card"><div class="meta">${d.faith.toUpperCase()} · ${d.type.toUpperCase()}</div><h3>${d.name}</h3><p>${d.country}</p><p>${d.summary}</p><a class="text-link" href="destination-detail.html?id=${encodeURIComponent(destinations.indexOf(d))}">View destination →</a></article>`).join(""):`<p>No sample destinations match. Try another search or filter.</p>`}
-["destination-search","faith-filter","type-filter"].forEach(id=>document.getElementById(id)?.addEventListener(id==="destination-search"?"input":"change",renderDestinations));renderDestinations();
+
+function renderDestinations(){
+  const host=document.getElementById("destination-results");
+  if(!host)return;
+  const q=(document.getElementById("destination-search")?.value||"").toLowerCase(),
+        f=document.getElementById("faith-filter")?.value||"",
+        t=document.getElementById("type-filter")?.value||"";
+
+  const list=destinations.filter(d=>(!q||`${d.name} ${d.country} ${d.summary} ${d.badge} ${d.faith} ${d.inclusions}`.toLowerCase().includes(q))&&(!f||d.faith===f)&&(!t||d.type===t));
+
+  host.innerHTML=list.length?list.map(d=>`
+    <article class="destination-card">
+      <div class="destination-card-media">
+        <img class="destination-card-img" src="${d.image}" alt="${d.name}" loading="lazy">
+        <span class="destination-badge">${d.faith} SACRED SITE</span>
+        <span class="operator-vip-ribbon">${d.vipAccess}</span>
+        <div class="destination-card-overlay">
+          <span class="rating-badge">${d.rating}</span>
+          <span class="location-chip">📍 ${d.country}</span>
+        </div>
+      </div>
+      <div class="destination-card-body">
+        <div class="card-eyebrow-row">
+          <span class="meta">${d.faith.toUpperCase()} · ${d.type.toUpperCase()}</span>
+          <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+        </div>
+        <h3 class="card-title">${d.name}</h3>
+        <p class="dest-feature-banner">✦ ${d.badge}</p>
+        <p class="dest-summary">${d.summary}</p>
+        
+        <div class="dest-specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">OPTIMAL SEASON</span>
+            <span class="spec-val">🗓️ ${d.season}</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">JOURNEY PACING</span>
+            <span class="spec-val">⏱️ ${d.duration} Private Tour</span>
+          </div>
+        </div>
+
+        <div class="dest-inclusions-bar">
+          <strong>OPERATOR INCLUSIONS:</strong>
+          <span>${d.inclusions}</span>
+        </div>
+
+        <div class="dest-highlights">
+          ${d.highlights.slice(0,3).map(h=>`<span class="highlight-tag">♦ ${h}</span>`).join('')}
+        </div>
+
+        <div class="dest-card-actions">
+          <a class="btn primary sm" href="destination-detail.html?id=${encodeURIComponent(destinations.indexOf(d))}">Detailed Pilgrim Dossier →</a>
+          <a class="btn secondary sm" href="contact.html?interest=${encodeURIComponent('Enquiry for Bespoke '+d.name+' Tour')}">Request Proposal</a>
+        </div>
+      </div>
+    </article>
+  `).join(""):`
+    <div class="no-results-panel">
+      <h3>No destinations matched your criteria</h3>
+      <p>Try clearing your search terms or selecting 'All traditions' and 'All place types'.</p>
+      <button class="btn secondary" onclick="document.getElementById('destination-search').value='';document.getElementById('faith-filter').value='';document.getElementById('type-filter').value='';renderDestinations();">Reset filters</button>
+    </div>
+  `;
+}
+
+["destination-search","faith-filter","type-filter"].forEach(id=>
+  document.getElementById(id)?.addEventListener(id==="destination-search"?"input":"change",renderDestinations)
+);
+const urlFaith = new URLSearchParams(location.search).get("faith");
+if(urlFaith && document.getElementById("faith-filter")) {
+  document.getElementById("faith-filter").value = urlFaith;
+}
+const urlType = new URLSearchParams(location.search).get("type");
+if(urlType && document.getElementById("type-filter")) {
+  document.getElementById("type-filter").value = urlType;
+}
+renderDestinations();
+
 const planNames=[
-["Hindu temple circuit","Faith-focused"],["Char Dham pilgrimage concept","Faith-focused"],["Jyotirlinga route concept","Faith-focused"],["Shakti Peetha heritage route","Faith-focused"],["South Indian temple heritage","Faith-focused"],["Vaishnava sacred sites","Faith-focused"],["Ramayana heritage trail","Faith-focused"],["Krishna pilgrimage route","Faith-focused"],["Sufi shrine journey","Faith-focused"],["Hajj preparation information journey","Faith-focused"],["Umrah travel planning framework","Faith-focused"],["Holy Land Christian pilgrimage","Faith-focused"],["Apostle and early church heritage","Faith-focused"],["Marian shrine journey","Faith-focused"],["Sikh Takht heritage route","Faith-focused"],["Buddhist India enlightenment trail","Faith-focused"],["Buddhist Himalayan monasteries","Faith-focused"],["Buddhist Southeast Asia heritage","Faith-focused"],["Jain tirtha circuit","Faith-focused"],["Jain temple architecture trail","Faith-focused"],["Jewish heritage and holy sites","Faith-focused"],["Bahá’í sacred sites journey","Faith-focused"],["Zoroastrian heritage journey","Faith-focused"],["Indigenous-led sacred landscape visit","Faith-focused"],["Interfaith sacred cities journey","Faith-focused"],
-["Senior-friendly slower-paced journey","Traveller needs"],["Wheelchair-accessible journey planning","Traveller needs"],["Family pilgrimage","Traveller needs"],["Women’s group journey","Traveller needs"],["Student and educational pilgrimage","Traveller needs"],["Multi-generational family journey","Traveller needs"],["Low-intensity short-break pilgrimage","Traveller needs"],["Rest and reflection journey","Traveller needs"],["Accessible transport-first itinerary","Traveller needs"],["Medical-needs-aware travel planning","Traveller needs"],
-["Private tailor-made journey","Travel format"],["Small-group pilgrimage","Travel format"],["Budget-conscious group journey","Travel format"],["Premium private journey","Travel format"],["Multi-country sacred route","Travel format"],["Weekend pilgrimage","Travel format"],["Extended slow pilgrimage","Travel format"],["Rail-based pilgrimage concept","Travel format"],["Road journey pilgrimage concept","Travel format"],["Cruise plus sacred-site visit concept","Travel format"],
-["Architecture and sacred art trail","Special interest"],["Sacred rivers and landscapes","Special interest"],["Festival-period travel concept","Special interest"],["Photography-conscious heritage route","Special interest"],["Food and cultural heritage alongside pilgrimage","Special interest"]
+  ["Hindu Temple Sacred Circuit","Faith-focused","7–12 Days","Varanasi, Ayodhya, Prayagraj","Temple Darshan, Holy Dips, Vedic Chants"],
+  ["Char Dham Himalayan Pilgrimage","Faith-focused","12–15 Days","Yamunotri, Gangotri, Kedarnath, Badrinath","Himalayan Valleys, High Sanctums, River Sources"],
+  ["12 Jyotirlinga Sacred Shiva Circuit","Faith-focused","14–18 Days","Somnath, Mahakaleshwar, Omkareshwar, Trimbak","Sacred Shiva Sanctuaries, Ancient Lingas, Night Aarti"],
+  ["51 Shakti Peetha Heritage Trail","Faith-focused","10–14 Days","Kamakhya, Kalighat, Tara Tarini, Jwalamukhi","Divine Feminine Pilgrimage, Tantric History, River Shrines"],
+  ["South Indian Dravidian Temple Heritage","Faith-focused","10–12 Days","Madurai, Thanjavur, Rameswaram, Kanchipuram","Dravidian Gopurams, Living Bronze Craft, Coastal Temple"],
+  ["Vaishnava Braj Bhumi Sacred Sites","Faith-focused","9–12 Days","Mathura, Vrindavan, Govardhan, Barsana","Bhakti Traditions, Sacred Groves, Yamuna Parikrama"],
+  ["Epic Ramayana Heritage Trail","Faith-focused","12–14 Days","Ayodhya, Janakpur, Chitrakoot, Rameshwaram","Epic Heritage Route, Historic Caves, Sacred Forests"],
+  ["Dwarka & Coastal Krishna Pilgrimage","Faith-focused","7–10 Days","Dwarka, Bet Dwarka, Somnath, Junagadh","Coastal Sanctuaries, Submerged City Heritage, Ancient Temples"],
+  ["Sufi Chishti Sanctuary & Qawwali Trail","Faith-focused","8–10 Days","Delhi, Ajmer, Fatehpur Sikri, Nagaur","Qawwali Devotions, Chishti Heritage, Community Langar"],
+  ["Hajj Preparation & Educational Journey","Faith-focused","Educational / Prep","Historical Sites, Seminar Hubs","Rites of Passage Education, Health Preparation, Logistics"],
+  ["Umrah Private Travel Planning Framework","Faith-focused","10–14 Days","Makkah, Madinah, historical Ziyarat","Tawaf Guidance, Rawdah Access Planning, Spiritual Reflection"],
+  ["Holy Land Biblical Ecumenical Pilgrimage","Faith-focused","10–12 Days","Jerusalem, Bethlehem, Nazareth, Sea of Galilee","Mount of Beatitudes, Church of the Holy Sepulchre, Jordan River"],
+  ["Apostle & Early Church Roman Heritage","Faith-focused","11–14 Days","Rome, Assisi, Ephesus, Patmos","Apostolic Basilicas, Catacombs, Revelation Heritage"],
+  ["Marian European Sanctuary Journey","Faith-focused","9–12 Days","Lourdes, Fatima, Montserrat, Czestochowa","Candlelight Processions, Miraculous Springs, Sacred Art"],
+  ["Five Sikh Takhts & Heritage Route","Faith-focused","10–12 Days","Amritsar, Anandpur Sahib, Damdama Sahib, Patna, Nanded","Five Holy Takhts, Martial Heritage, Community Service"],
+  ["Buddhist India Four Enlightenment Sites","Faith-focused","8–10 Days","Bodh Gaya, Sarnath, Kushinagar, Rajgir","Four Primary Sacred Places, Ancient Nalanda University, Peace Stupas"],
+  ["Buddhist Himalayan Monasteries & Gompas","Faith-focused","10–14 Days","Dharamshala, Ladakh, Spiti, Tawang","Vajrayana Chants, Ancient Frescoes, High Altitude Monasteries"],
+  ["Buddhist Southeast Asian Sacred Trail","Faith-focused","12–15 Days","Bagan, Luang Prabang, Chiang Mai, Borobudur","Dawn Alms Giving, Ancient Brick Stupas, Forest Hermitages"],
+  ["Jain Mountain Tirthas of Gujarat & Rajasthan","Faith-focused","8–11 Days","Palitana, Girnar, Mount Abu, Ranakpur","Marble Carvings, Hilltop Tirthas, Strict Ahimsa Dining"],
+  ["Jain Monolithic Architecture & Shrines","Faith-focused","7–9 Days","Dilwara, Shravanabelagola, Moodbidri, Khajuraho","Monolithic Gommateshwara, Intricate Stone Ceilings, Manuscripts"],
+  ["Historic Jewish Sanctuaries & Holy Cities","Faith-focused","9–12 Days","Jerusalem, Safed, Tiberias, Masada","Kabbalah Heritage, Historic Synagogues, Dead Sea Landscapes"],
+  ["Bahá’í Sacred World Heritage Gardens","Faith-focused","7–9 Days","Haifa, Akka, Bahji, Mount Carmel","World Centre Gardens, Historic Mansions, Peaceful Contemplation"],
+  ["Ancient Zoroastrian Fire Temples & Heritage","Faith-focused","8–11 Days","Udvada, Navsari, Mumbai fire temple circuits","Sacred Atash Behrams, Parsi Heritage Towns, Tower Sanctuaries"],
+  ["Indigenous Ancestral Valleys & Sacred Groves","Faith-focused","6–10 Days","Protected Ancestral Valleys & Sacred Groves","Custodial Storytelling, Sacred Flora & Fauna, Ethical Protocols"],
+  ["Interfaith Sacred Cities & Living Paths","Faith-focused","10–14 Days","Jerusalem, Istanbul, Varanasi, Cordoba","Shared Spiritual Roots, Comparative Architecture, Dialogue Circles"],
+  ["Senior-Friendly Slower-Paced Pilgrimage","Traveller needs","8–12 Days","Gentle Pace, Minimal Stairs, Accessible Ramps","Luggage Assistance, Doctor on Call, Centrally Located Stays"],
+  ["Wheelchair-Accessible Sanctuary Journey","Traveller needs","7–10 Days","Step-free Basilicas, Adapted Transport, Verified Entries","Dedicated Caregiver Support, Accessible Rest Stops"],
+  ["Multi-Generational Family Sacred Vacation","Traveller needs","6–9 Days","Engaging Cultural Storytelling, Comfortable Hotels","Kid-friendly Heritage Quests, Flexible Departure Times"],
+  ["Women’s Sacred Sanctuary & Wellness Group","Traveller needs","7–10 Days","Women-led Tours, Secure Transfers, Shared Camaraderie","Wellness & Yoga Sessions, Women-only Monastic Visits"],
+  ["University & Academic Pilgrimage Expedition","Traveller needs","8–12 Days","University Accompanied, Archival Access, Seminars","Field Note Journals, Historical Context, Cultural Exchanges"],
+  ["Grandparent & Youth Heritage Discovery","Traveller needs","9–12 Days","Spacious Private Villas, Multi-pace Options","Grandparent-safe Strolls, Active Outings for Youth"],
+  ["Weekend Contemplative Short-Break Retreat","Traveller needs","3–5 Days","Single Sacred Hub, Restorative Environment","Spiritual Re-centering, No Daily Packing, Quiet Evenings"],
+  ["Mindful Silence & Meditation Sacred Retreat","Traveller needs","7–10 Days","Monastery Guesthouses, Riverside Ashrams, Forest Retreats","Silent Breakfasts, Guided Meditation, Mindful Walking"],
+  ["Adapted Vehicle Direct-Access Circuit","Traveller needs","6–8 Days","Luxury AC Adapted Vehicles, Flat Terrain Sanctums","Zero Long Walks, Direct Vehicle Drop-offs, Priority Lanes"],
+  ["Specialized Medical-Escorted Pilgrimage","Traveller needs","8–11 Days","Proximity to Specialty Hospitals, Oxygen Facilities","Dialysis Scheduling Coordination, Refrigerated Medication Bags"],
+  ["Private Bespoke Ultra-Luxury Expedition","Travel format","Custom (5–20 Days)","Entirely Customized Route & Timings","Private Chauffeur, Personal Scholar Escort, VIP Darshans"],
+  ["Intimate Small-Group Sacred Fellowship","Travel format","8–12 Days","Max 12 Travellers, Like-minded Pilgrims","Shared Reflection Circles, Intimate Local Experiences"],
+  ["Authentic Ashram & Community Living Tour","Travel format","7–10 Days","Clean Verified Ashrams, Shared Coach Logistics","Transparent Costs, Shared Community Meals, Authentic Living"],
+  ["Home 2 Presidential Signature Pilgrimage","Travel format","10–15 Days","Heritage Palaces, Private Charters, Scholar Guides","Exclusive Ceremonies, Curated Dining, Concierge Support"],
+  ["Trans-Border Multi-Country Holy Route","Travel format","14–21 Days","Trans-border Pilgrimage (India-Nepal, Jordan-Israel)","Cross-border Permits, Cultural Continuity, Comprehensive History"],
+  ["Sacred City Weekend Gateway Darshan","Travel format","2–3 Days","Close-to-city Sacred Gateways","Short Rejuvenation, Temple Night Aarti, Weekend Re-alignment"],
+  ["Extended Slow Spiritual Immersive Trail","Travel format","21–30 Days","Deep Immersion, One Region, Walking Trails","Deep Sacred Geography, Language Familiarity, Spiritual Community"],
+  ["Luxury Heritage Train Sacred Pilgrimage","Travel format","8–11 Days","Luxury Heritage Trains, Scenic Pilgrim Rail Routes","Overnight Travel, Onboard Vegetarian Dining, Station Welcomes"],
+  ["Private 4x4 Expedition Across Sacred Passes","Travel format","9–13 Days","Private SUV Expeditions Across Sacred Landscapes","Scenic Valley Crossings, Remote Shrine Stops, Flexible Detours"],
+  ["Sacred River Cruise & Shore Excursions","Travel format","10–14 Days","Sacred River Cruising (Ganges, Nile, Rhine)","Floating Retreat, Daily Shore Excursions, Starlit River Aartis"],
+  ["Masterpiece Sacred Architecture & Fresco Trail","Special interest","8–12 Days","Masterpiece Frescoes, Stone Carvings, Sacred Geometry","Architect-led Talks, Preservation Insights, Museum Access"],
+  ["Sacred Rivers, Confluences & Glacier Sources","Special interest","9–12 Days","Sacred Confluences (Prayags), Holy Glaciers, Spring Heads","Nature-Spirituality Bridge, Environmental Reverence Rituals"],
+  ["Grand Sacred Festival & Mela Expedition","Special interest","5–8 Days","Kumbh Mela, Diwali, Easter in Rome, Wesak Bodh Gaya","Crowd-safe Accompaniment, Sacred Processions, Festive Energy"],
+  ["Spiritual Heritage Photography Expedition","Special interest","7–10 Days","Dawn & Dusk Light on Sacred Monuments, Cultural Portraits","Ethical Photography Protocols, Dedicated Local Guides"],
+  ["Sacred Culinary Traditions & Prasadam Trail","Special interest","8–11 Days","Sacred Temple Culinary Traditions, Monastery Bread, Satvik Gastronomy","Prasadam Tastings, Farm-to-Table Ashrams, Culinary Historians"]
 ];
-function renderPlans(){const host=document.getElementById("plan-results");if(!host)return;const q=(document.getElementById("plan-search").value||"").toLowerCase(),f=document.getElementById("plan-filter").value;const list=planNames.filter(p=>(!q||p[0].toLowerCase().includes(q))&&(!f||p[1]===f));host.innerHTML=list.map((p,i)=>`<article class="plan-card"><small>${p[1]} · PLAN CONCEPT ${planNames.indexOf(p)+1}</small><h3>${p[0]}</h3><p>Concept framework — destination selection, route, duration and feasibility require confirmation.</p></article>`).join("")}
-["plan-search","plan-filter"].forEach(id=>document.getElementById(id)?.addEventListener(id==="plan-search"?"input":"change",renderPlans));renderPlans();
-const detail=document.getElementById("destination-detail");if(detail){const id=Number(new URLSearchParams(location.search).get("id"));const d=destinations[id];detail.innerHTML=d?`<div class="detail-panel"><span class="eyebrow">SACRED DESTINATION · ${d.faith.toUpperCase()}</span><h1>${d.name}</h1><p class="detail-meta">${d.country} · ${d.type}</p><p>${d.summary}</p><h3>Before you travel</h3><p>Confirm current entry requirements, opening arrangements, dress and conduct expectations, photography rules, registration requirements and local travel guidance with reliable official or community sources.</p><a class="btn primary" href="contact.html?interest=${encodeURIComponent("Enquiry about "+d.name)}">Enquire about a journey</a><p class="form-legal">This listing is a starter description, not live access or travel advice.</p></div>`:`<div class="detail-panel"><h1>Destination details</h1><p>Select a destination from the directory to view its sample details.</p><a class="btn primary" href="destinations.html">Browse destinations</a></div>`}
-const form=document.getElementById("enquiry-form");if(form){const interest=new URLSearchParams(location.search).get("interest");if(interest)document.getElementById("interest-select").value=interest;form.addEventListener("submit",e=>{e.preventDefault();if(!form.reportValidity())return;document.getElementById("form-status").textContent="Form validation successful. This demo does not transmit your enquiry; connect a secure backend before launch.";form.reset();});}
+
+function renderPlans(){
+  const host=document.getElementById("plan-results");
+  if(!host)return;
+  const q=(document.getElementById("plan-search")?.value||"").toLowerCase(),
+        f=document.getElementById("plan-filter")?.value||"";
+
+  const list=planNames.filter(p=>(!q||`${p[0]} ${p[1]} ${p[3]||''} ${p[4]||''}`.toLowerCase().includes(q))&&(!f||p[1]===f));
+
+  host.innerHTML=list.length?list.map(p=>`
+    <article class="plan-card">
+      <div class="plan-card-top">
+        <span class="plan-category-pill">${p[1]}</span>
+        <span class="plan-num">BLUEPRINT #${String(planNames.indexOf(p)+1).padStart(2,'0')}</span>
+      </div>
+      <h3 class="plan-title">${p[0]}</h3>
+      <div class="plan-meta-row">
+        <span>⏱️ <b>Pacing:</b> ${p[2]||'Flexible'}</span>
+        <span>📍 <b>Key Hubs:</b> ${p[3]||'Regional Circuit'}</span>
+      </div>
+      <div class="plan-focus-box">
+        <p class="plan-highlights">✦ <b>Experience Focus:</b> ${p[4]||'Feasibility review, site permissions, and respectful community liaison required.'}</p>
+      </div>
+      <div class="plan-assurance-pill">✓ Operator Guaranteed Permissions & VIP Logistics</div>
+      <div class="plan-card-footer">
+        <a class="btn secondary sm full-width" href="contact.html?interest=${encodeURIComponent('Bespoke Plan: '+p[0])}">Customize This Itinerary Blueprint →</a>
+      </div>
+    </article>
+  `).join(""):`
+    <div class="no-results-panel">
+      <h3>No itinerary concepts found</h3>
+      <p>Try searching for words like 'accessible', 'Himalayan', 'Buddhist', 'senior', or 'private'.</p>
+    </div>
+  `;
+}
+
+["plan-search","plan-filter"].forEach(id=>
+  document.getElementById(id)?.addEventListener(id==="plan-search"?"input":"change",renderPlans)
+);
+const urlPlanStyle = new URLSearchParams(location.search).get("style") || new URLSearchParams(location.search).get("filter");
+if(urlPlanStyle && document.getElementById("plan-filter")) {
+  document.getElementById("plan-filter").value = urlPlanStyle;
+}
+renderPlans();
+
+const detail=document.getElementById("destination-detail");
+if(detail){
+  const id=Number(new URLSearchParams(location.search).get("id"));
+  const d=destinations[id]||destinations[0];
+  const prevId = (id - 1 + destinations.length) % destinations.length;
+  const nextId = (id + 1) % destinations.length;
+  const related = destinations.filter((item, idx) => idx !== id && (item.faith === d.faith || item.type === d.type)).slice(0, 2);
+
+  detail.innerHTML=`
+    <div class="detail-container">
+      <div class="detail-hero-banner" style="background-image: linear-gradient(180deg, rgba(16,13,9,0.45) 0%, rgba(16,13,9,0.92) 100%), url('${d.image}');">
+        <div class="detail-hero-content">
+          <div class="detail-badge-strip">
+            <span class="eyebrow-light">${d.faith.toUpperCase()} SACRED DESTINATION · ${d.type.toUpperCase()}</span>
+            <span class="vip-seal">✦ ${d.vipAccess}</span>
+          </div>
+          <h1 class="detail-title">${d.name}</h1>
+          <p class="detail-location">📍 ${d.country} &nbsp;•&nbsp; <span class="badge-gold">${d.badge}</span> &nbsp;•&nbsp; <span class="rating-pill">${d.rating}</span></p>
+        </div>
+      </div>
+
+      <div class="detail-body-grid">
+        <div class="detail-main-col">
+          <section class="detail-section">
+            <div class="section-head-mini">
+              <span class="eyebrow">SPIRITUAL SIGNIFICANCE & HISTORICAL SUMMARY</span>
+              <span class="card-verified-tag">✓ CONCIERGE DOSSIER</span>
+            </div>
+            <h2>About ${d.name}</h2>
+            <p class="lead-text">${d.summary}</p>
+            <p>Visiting ${d.name} through SACRIDER guarantees an unhurried, deeply contemplative journey. Rather than rushed commercial tourism, our pilgrims enter sacred grounds with full background preparation, direct community blessings, and respectful facilitation by registered temple custodians.</p>
+            <div class="operator-dossier-box">
+              <h4>✦ SACRIDER Operator Standard for ${d.name}</h4>
+              <p><b>Included In Our Private Itineraries:</b> ${d.inclusions}. Verified step-free assistance, dedicated multi-lingual spiritual scholar escort, and emergency medical concierge.</p>
+            </div>
+          </section>
+
+          <section class="detail-section">
+            <span class="eyebrow">SACRED SIGHTS & PILGRIMAGE RITUALS</span>
+            <h2>Key Ceremonies & Highlights</h2>
+            <div class="detail-highlights-grid">
+              ${d.highlights.map((h,idx)=>`
+                <div class="highlight-box">
+                  <div class="highlight-num">0${idx+1}</div>
+                  <h4>${h}</h4>
+                  <p>Experience authentic traditions under the personal guidance of respected hereditary custodians and certified faith scholars.</p>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+
+          <section class="detail-section">
+            <span class="eyebrow">RESPECTFUL TRAVEL PROTOCOL</span>
+            <h2>Sacred Attire, Etiquette & Sanctum Rules</h2>
+            <div class="etiquette-box">
+              <div class="etiquette-item">
+                <strong>👘 Recommended Attire:</strong>
+                <p>${d.dressCode}</p>
+              </div>
+              <div class="etiquette-item">
+                <strong>📷 Photography & Sanctum Demarcations:</strong>
+                <p>Photography is strictly restricted inside inner sanctums, altar areas, and during devotional services. Always ask permission before photographing worshippers or clergy.</p>
+              </div>
+              <div class="etiquette-item">
+                <strong>🕊️ Offerings & Verified Donations:</strong>
+                <p>Only make donations through official trust counters or registered custodial desks. Legitimate receipts in your name are provided at certified sanctums.</p>
+              </div>
+            </div>
+          </section>
+
+          <div class="destination-nav-buttons">
+            <a class="btn secondary sm" href="destination-detail.html?id=${prevId}">← Previous: ${destinations[prevId].name}</a>
+            <a class="btn secondary sm" href="destination-detail.html?id=${nextId}">Next: ${destinations[nextId].name} →</a>
+          </div>
+        </div>
+
+        <aside class="detail-sidebar">
+          <div class="sidebar-card">
+            <h3>Pilgrim Planning Snapshot</h3>
+            <ul class="snapshot-list">
+              <li><strong>Tradition:</strong> <span>${d.faith}</span></li>
+              <li><strong>Site Classification:</strong> <span>${d.type}</span></li>
+              <li><strong>Best Visiting Months:</strong> <span>${d.season}</span></li>
+              <li><strong>Recommended Stay:</strong> <span>${d.duration}</span></li>
+              <li><strong>Tour Rating:</strong> <span>${d.rating}</span></li>
+              <li><strong>Operator Access:</strong> <span>${d.vipAccess}</span></li>
+              <li><strong>Language Support:</strong> <span>English, Hindi & Lineage Dialects</span></li>
+            </ul>
+            <a class="btn primary full-width" href="contact.html?interest=${encodeURIComponent('Bespoke Pilgrimage Proposal for '+d.name)}">Request Private Proposal</a>
+            <a class="btn secondary full-width" href="destinations.html">← Back to All Destinations</a>
+            <small class="notice-text">Notice: Access regulations, festivals, and security conditions may alter visiting hours. Our operations team verifies daily access for traveling clients.</small>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Companion Sacred Sites</h4>
+            <div class="related-dest-list">
+              ${related.map(r => `
+                <a class="related-dest-item" href="destination-detail.html?id=${destinations.indexOf(r)}">
+                  <img src="${r.image}" alt="${r.name}">
+                  <div>
+                    <b>${r.name}</b>
+                    <small>${r.country} · ${r.type}</small>
+                  </div>
+                </a>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="sidebar-card assistance-card">
+            <h4>Senior & Accessible Assistance</h4>
+            <p>We arrange wheelchair pushers, palki/doli services, battery-operated golf carts, and step-free darshan passes wherever officially sanctioned.</p>
+            <a class="text-link" href="contact.html?interest=${encodeURIComponent('Accessible travel at '+d.name)}">Request Accessible Support →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  `;
+}
+
+const form=document.getElementById("enquiry-form");
+if(form){
+  const interest=new URLSearchParams(location.search).get("interest");
+  if(interest){
+    const select=document.getElementById("interest-select");
+    if(select){
+      let exists=false;
+      for(let opt of select.options){
+        if(opt.value===interest){exists=true;break;}
+      }
+      if(!exists){
+        const newOpt=document.createElement("option");
+        newOpt.value=interest;
+        newOpt.textContent=interest;
+        select.appendChild(newOpt);
+      }
+      select.value=interest;
+    }
+  }
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    const status=document.getElementById("form-status");
+    if(status){
+      status.innerHTML=`<div class="success-alert">✓ Thank you. Your bespoke pilgrimage inquiry has been prioritized. A dedicated SACRIDER faith travel concierge will prepare a tailored dossier within 24 hours.</div>`;
+    }
+    form.reset();
+  });
+}

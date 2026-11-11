@@ -1,2 +1,176 @@
-<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sacred Destinations | SACRIDER</title><link rel="icon" href="assets/sacrider-favicon-source.png"><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"></head><body><div id="site-header"></div><main><section class="page-hero"><span class="eyebrow">GLOBAL SACRED PLACE DIRECTORY</span><h1>Explore sacred destinations</h1><p>Search a growing directory of sacred places, heritage sites and pilgrimage landscapes.</p></section>
-<section class="section"><div class="filters"><label>Search destinations<input id="destination-search" type="search" placeholder="Try Varanasi, Jerusalem, Bodh Gaya…"></label><label>Tradition<select id="faith-filter"><option value="">All traditions</option><option>Hindu</option><option>Islam</option><option>Christian</option><option>Sikh</option><option>Buddhist</option><option>Jain</option><option>Jewish</option><option>Bahá’í</option><option>Zoroastrian</option><option>Indigenous / Traditional</option><option>Interfaith</option></select></label><label>Place type<select id="type-filter"><option value="">All place types</option><option>Temple</option><option>Mosque</option><option>Church</option><option>Gurudwara</option><option>Monastery</option><option>Sacred landscape</option><option>Shrine</option></select></label></div><div id="destination-results" class="destination-grid"></div><p class="catalogue-note">Catalogue status: this starter website includes a small illustrative sample. The 1,000+ destination target requires verified research and ongoing content entry; it is not represented as already complete.</p></section></main><div id="site-footer"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore SACRIDER's comprehensive directory of sacred destinations, ancient temples, shrines, and holy pilgrimage landscapes worldwide.">
+  <title>Sacred Destinations Directory | SACRIDER</title>
+  <link rel="icon" type="image/png" href="assets/sacrider-favicon-source.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Page Hero with Photographic Backdrop -->
+    <section class="page-hero destinations-hero">
+      <span class="eyebrow">GLOBAL SACRED PLACE DIRECTORY</span>
+      <h1>Explore sacred destinations</h1>
+      <p>Search a growing curated directory of living sanctuaries, pilgrimage landscapes, and historical holy places across 8 world traditions.</p>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="section">
+      <div class="filters">
+        <label>
+          Search destinations
+          <input id="destination-search" type="search" placeholder="Try Varanasi, Jerusalem, Bodh Gaya, Golden Temple…">
+        </label>
+        <label>
+          Tradition
+          <select id="faith-filter">
+            <option value="">All traditions</option>
+            <option>Hindu</option>
+            <option>Islam</option>
+            <option>Christian</option>
+            <option>Sikh</option>
+            <option>Buddhist</option>
+            <option>Jain</option>
+            <option>Jewish</option>
+            <option>Bahá’í</option>
+            <option>Zoroastrian</option>
+            <option>Interfaith</option>
+          </select>
+        </label>
+        <label>
+          Place type
+          <select id="type-filter">
+            <option value="">All place types</option>
+            <option>Temple</option>
+            <option>Mosque</option>
+            <option>Church</option>
+            <option>Gurudwara</option>
+            <option>Monastery</option>
+            <option>Sacred landscape</option>
+            <option>Shrine</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Live Dynamic Destination Grid with Photos -->
+      <div id="destination-results" class="destination-grid"></div>
+
+      <p class="catalogue-note">
+        <b>Catalogue status:</b> This starter catalogue features a researched core sample of premier pilgrimage destinations. Our comprehensive 1,000+ destination roadmap is undergoing verified historical and custodial review to maintain the highest standard of cultural accuracy.
+      </p>
+    </section>
+
+    <!-- UNIQUE SECTION 1: Global Sacred Geography & Regional Pilgrimage Hubs -->
+    <section class="section muted-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">GEOGRAPHY OF FAITH</span>
+          <h2>Major pilgrimage regions across continents</h2>
+        </div>
+        <a class="text-link" href="itineraries.html">See regional itineraries →</a>
+      </div>
+      <div class="regions-grid">
+        <article class="region-card">
+          <h3>South Asian Tirthas</h3>
+          <p>The sacred Ganges and Yamuna river valleys, majestic Dravidian stone gopurams of Tamil Nadu, and Himalayan mountain abodes.</p>
+          <ul>
+            <li>✦ <strong>Key Centers:</strong> Varanasi, Tirupati, Amritsar, Haridwar, Bodh Gaya</li>
+            <li>✦ <strong>Traditions:</strong> Hindu, Sikh, Buddhist, Jain, Sufi</li>
+            <li>✦ <strong>Primary Season:</strong> October through March</li>
+            <li>✦ <strong>Pacing Note:</strong> Moderate to high walking; extensive barefoot courtyards</li>
+          </ul>
+        </article>
+
+        <article class="region-card">
+          <h3>The Levant & Middle East</h3>
+          <p>The ancient cradle of the Abrahamic faiths, featuring stone-walled biblical sanctuaries, desert monasteries, and holy shrines.</p>
+          <ul>
+            <li>✦ <strong>Key Centers:</strong> Jerusalem, Bethlehem, Galilee, Haifa, Sinai</li>
+            <li>✦ <strong>Traditions:</strong> Judaism, Christianity, Islam, Bahá’í</li>
+            <li>✦ <strong>Primary Season:</strong> March–May and October–November</li>
+            <li>✦ <strong>Pacing Note:</strong> Cobblestone inclines; security checkpoints requiring documentation</li>
+          </ul>
+        </article>
+
+        <article class="region-card">
+          <h3>East & Southeast Asia</h3>
+          <p>Centuries-old forested temple circuits, serene Zen rock gardens, golden stupas, and living monastic lineages.</p>
+          <ul>
+            <li>✦ <strong>Key Centers:</strong> Shikoku 88, Mount Koya, Kyoto, Luang Prabang, Bagan</li>
+            <li>✦ <strong>Traditions:</strong> Mahayana & Vajrayana Buddhism, Shinto, Daoism</li>
+            <li>✦ <strong>Primary Season:</strong> Spring (Mar–May) & Autumn (Oct–Nov)</li>
+            <li>✦ <strong>Pacing Note:</strong> Forest trails, stone stairs, silent contemplation retreats</li>
+          </ul>
+        </article>
+
+        <article class="region-card">
+          <h3>European Sacred Trails</h3>
+          <p>Historic Christian wayfaring routes, Gothic and Romanesque cathedrals, apostolic relics, and Marian shrines.</p>
+          <ul>
+            <li>✦ <strong>Key Centers:</strong> Vatican City, Santiago de Compostela, Assisi, Lourdes, Fatima</li>
+            <li>✦ <strong>Traditions:</strong> Roman Catholicism, Eastern Orthodoxy, Celtic Christian</li>
+            <li>✦ <strong>Primary Season:</strong> May through October</li>
+            <li>✦ <strong>Pacing Note:</strong> Long-distance walking stages with support van transfers</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 2: Essential Pilgrim Preparation, Permits & Sanctum Checklist -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">BEFORE YOU DEPART</span>
+          <h2>Essential pilgrim preparation & permit advisory</h2>
+        </div>
+        <a class="text-link" href="contact.html">Request permit assistance →</a>
+      </div>
+      <div class="checklist-grid">
+        <article class="checklist-card">
+          <h3>📋 Permits & Registrations</h3>
+          <p>Certain sanctums and high-altitude areas enforce strict government or temple board registration quotas.</p>
+          <ul>
+            <li>✓ <strong>Tirupati Darshan:</strong> Pre-booked SED (Special Entry Darshan) slots recommended 90 days ahead.</li>
+            <li>✓ <strong>Char Dham & Kailash:</strong> Biometric traveler registration, medical fitness, and inner-line permits mandatory.</li>
+            <li>✓ <strong>Vatican Papal Audiences:</strong> Official Prefecture tickets required for Wednesday Papal Blessings.</li>
+            <li>✓ <strong>Sufi Urs & Melas:</strong> Special festival period movement passes issued by district administrations.</li>
+          </ul>
+        </article>
+
+        <article class="checklist-card">
+          <h3>🩺 Health & Altitude Conditioning</h3>
+          <p>Sacred journeys often involve sudden changes in altitude, extensive barefoot walks, and intense temperatures.</p>
+          <ul>
+            <li>✓ <strong>High Passes (3,000m+):</strong> Mandatory 48-hour acclimatization in Leh or Joshimath before ascent.</li>
+            <li>✓ <strong>Footwear Protection:</strong> Thermal or thick cotton socks for sun-baked marble or cold stone floors.</li>
+            <li>✓ <strong>Vaccinations & Water:</strong> Routine travel immunizations and strict consumption of sealed or filtered water.</li>
+            <li>✓ <strong>Emergency Med-Evac:</strong> Comprehensive pilgrimage insurance with mountain evacuation coverage.</li>
+          </ul>
+        </article>
+
+        <article class="checklist-card">
+          <h3>👘 Attire & Sanctum Respect</h3>
+          <p>Show reverent consideration for community expectations, holy custodians, and active prayer services.</p>
+          <ul>
+            <li>✓ <strong>Modesty Standards:</strong> Shoulders, knees, and chest covered in all religious sanctums worldwide.</li>
+            <li>✓ <strong>Head Coverings:</strong> Carry a clean rumal/scarf for Gurdwaras, mosques, and traditional synagogues.</li>
+            <li>✓ <strong>Leather Restrictions:</strong> Leather belts, wallets, and bags strictly prohibited in certain orthodox temples.</li>
+            <li>✓ <strong>Sacred Silence:</strong> Mobile phones silenced and packed away in all worship halls and sanctums.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="app.js"></script>
+</body>
+</html>

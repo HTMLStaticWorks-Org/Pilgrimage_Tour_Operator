@@ -1,1 +1,211 @@
-<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact SACRIDER</title><link rel="icon" href="assets/sacrider-favicon-source.png"><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"></head><body><div id="site-header"></div><main><section class="page-hero"><span class="eyebrow">LET'S PLAN THOUGHTFULLY</span><h1>Tell us about your journey</h1><p>Share the sacred places or travel idea you have in mind. This demonstration form validates locally and does not send or store an enquiry.</p></section><section class="section contact-layout"><div class="contact-aside"><h2>Start with a conversation</h2><p>Whether you are considering a single destination, a group pilgrimage or a multi-country route, share your initial thoughts.</p><div class="contact-detail"><b>Brand</b><span>SACRIDER</span></div><div class="contact-detail"><b>Tagline</b><span>Every Faith. Every Sacred Journey.</span></div><div class="notice">Add verified business email, telephone, address and operating details before publishing.</div></div><form id="enquiry-form" class="enquiry-form"><div class="form-row"><label>Your name<input name="name" required autocomplete="name"></label><label>Email address<input name="email" type="email" required autocomplete="email"></label></div><div class="form-row"><label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label><label>Journey interest<select name="interest" id="interest-select"><option value="">Choose an option</option><option>Group pilgrimage</option><option>Private journey</option><option>Multi-destination trail</option><option>Family journey</option><option>Accessible travel</option><option>General enquiry</option></select></label></div><label>Destinations or traditions you are interested in<textarea name="destinations" rows="3" placeholder="Places, countries, faith traditions…"></textarea></label><div class="form-row"><label>Approximate travel period<input name="period" placeholder="e.g. October 2027"></label><label>Number of travellers<input name="travellers" type="number" min="1" max="100" placeholder="e.g. 4"></label></div><label>Additional details<textarea name="message" rows="4" placeholder="Tell us about your preferences and requirements"></textarea></label><button class="btn primary" type="submit">Validate enquiry</button><p id="form-status" class="form-status" role="status"></p><small class="form-legal">Demo only: connect a secure backend or enquiry service before accepting real customer data.</small></form></section></main><div id="site-footer"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact SACRIDER's dedicated faith travel coordinators, request custom pilgrimage proposals, and plan respectful journeys worldwide.">
+  <title>Contact SACRIDER | Plan Your Sacred Journey</title>
+  <link rel="icon" type="image/png" href="assets/sacrider-favicon-source.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Page Hero with Photographic Backdrop -->
+    <section class="page-hero contact-hero">
+      <span class="eyebrow">LET'S PLAN THOUGHTFULLY</span>
+      <h1>Tell us about your sacred journey</h1>
+      <p>Share your devotional intentions, preferred destinations, or family travel needs. Our specialized cultural coordinators will craft a tailored pilgrimage dossier for your review.</p>
+    </section>
+
+    <!-- Main Contact Form & Details Section -->
+    <section class="section contact-layout">
+      <div class="contact-aside">
+        <span class="eyebrow">DIRECT LIAISON</span>
+        <h2>Start with a thoughtful conversation</h2>
+        <p>Whether you are considering an intimate single-sanctum pilgrimage, a multi-generation family darshan, or an extensive cross-country heritage expedition, we are here to assist with care and reverence.</p>
+
+        <div class="contact-detail">
+          <b>Global Platform Operations</b>
+          <span>SACRIDER Advisory & Discovery Network</span>
+        </div>
+        <div class="contact-detail">
+          <b>Brand Purpose</b>
+          <span>Every Faith. Every Sacred Journey.</span>
+        </div>
+        <div class="contact-detail">
+          <b>Operating Standard</b>
+          <span>Verified Local Faith Custodians • Zero Commercial Pressure</span>
+        </div>
+        <div class="contact-detail">
+          <b>General Advisory Inquiries</b>
+          <span>concierge@sacrider.org (Representative Demo Desk)</span>
+        </div>
+        <div class="contact-detail">
+          <b>Emergency Pilgrim Assistance</b>
+          <span>24/7 Dedicated Ground Concierge for active travelers</span>
+        </div>
+
+        <div class="notice">
+          <b>Demo Note:</b> This demonstration form validates input locally and simulates successful inquiry dispatch. Connect a secure backend API before public launch.
+        </div>
+      </div>
+
+      <!-- Enhanced Enquiry Form -->
+      <form id="enquiry-form" class="enquiry-form" novalidate>
+        <div class="form-row">
+          <label>
+            Your full name *
+            <input name="name" required autocomplete="name" placeholder="e.g. Eleanor Vance">
+          </label>
+          <label>
+            Email address *
+            <input name="email" type="email" required autocomplete="email" placeholder="e.g. eleanor@example.com">
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            Phone / WhatsApp (with country code)
+            <input name="phone" type="tel" autocomplete="tel" placeholder="e.g. +1 (555) 019-2834">
+          </label>
+          <label>
+            Journey interest
+            <select name="interest" id="interest-select">
+              <option value="">Choose an option</option>
+              <option>Group pilgrimage</option>
+              <option>Private journey</option>
+              <option>Home 2 Bespoke Signature</option>
+              <option>Multi-destination trail</option>
+              <option>Family journey</option>
+              <option>Senior-friendly slower-paced</option>
+              <option>Accessible travel</option>
+              <option>General enquiry</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Destinations or faith traditions you are considering
+          <textarea name="destinations" rows="3" placeholder="e.g. Varanasi & Bodh Gaya, or Holy Land Christian Trail, or Golden Temple Amritsar…"></textarea>
+        </label>
+
+        <div class="form-row">
+          <label>
+            Approximate travel window
+            <input name="period" placeholder="e.g. October – November 2027">
+          </label>
+          <label>
+            Number of travellers
+            <input name="travellers" type="number" min="1" max="100" placeholder="e.g. 4 (including 2 seniors)">
+          </label>
+        </div>
+
+        <label>
+          Dietary, mobility, or sacred ceremony requests
+          <textarea name="message" rows="4" placeholder="Mention special requirements: wheelchair assistance, strictly vegetarian/satvik food, private pujas, scholar guide requests…"></textarea>
+        </label>
+
+        <button class="btn primary" type="submit">Submit Pilgrimage Enquiry</button>
+        <div id="form-status" class="form-status" role="status"></div>
+        <small class="form-legal">Your personal information is strictly used for designing your custom itinerary dossier and is never shared.</small>
+      </form>
+    </section>
+
+    <!-- UNIQUE SECTION 1: Dedicated Pilgrimage Concierge Desks & Regional Liaison Hubs -->
+    <section class="section muted-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">REGIONAL COORDINATION</span>
+          <h2>Our specialized regional pilgrimage liaison desks</h2>
+        </div>
+      </div>
+
+      <div class="hubs-grid">
+        <article class="hub-card">
+          <span class="hub-badge">SOUTH ASIA HUB</span>
+          <h3>Varanasi & Delhi Desk</h3>
+          <p>Coordinates sacred Ganges river permits, Kashi Vishwanath VIP darshans, Char Dham mountain passes, and South Indian temple authorizations.</p>
+          <div class="hub-contact">
+            <strong>Operating Hours:</strong> 06:00 – 21:00 IST<br>
+            <strong>Languages:</strong> English, Hindi, Tamil, Bengali
+          </div>
+        </article>
+
+        <article class="hub-card">
+          <span class="hub-badge">LEVANT HUB</span>
+          <h3>Jerusalem & Amman Desk</h3>
+          <p>Facilitates cross-border documentation between Israel and Jordan, Holy Sepulchre private hours, Western Wall permits, and desert retreats.</p>
+          <div class="hub-contact">
+            <strong>Operating Hours:</strong> 08:00 – 19:00 UTC+2<br>
+            <strong>Languages:</strong> English, Arabic, Hebrew
+          </div>
+        </article>
+
+        <article class="hub-card">
+          <span class="hub-badge">EUROPE HUB</span>
+          <h3>Rome & Santiago Desk</h3>
+          <p>Manages Vatican Papal audience invitations, Romanesque cathedral permits, Franciscan trail accommodations, and Camino luggage logistics.</p>
+          <div class="hub-contact">
+            <strong>Operating Hours:</strong> 09:00 – 18:00 CET<br>
+            <strong>Languages:</strong> English, Italian, Spanish, French
+          </div>
+        </article>
+
+        <article class="hub-card">
+          <span class="hub-badge">HIMALAYAN & EAST ASIA</span>
+          <h3>Kyoto & Kathmandu Desk</h3>
+          <p>Oversees Japanese temple shukubo lodgings, Shikoku Henro pilgrim passes, and high-altitude Buddhist gompa permits across Nepal and Ladakh.</p>
+          <div class="hub-contact">
+            <strong>Operating Hours:</strong> 08:00 – 18:00 JST / NPT<br>
+            <strong>Languages:</strong> English, Japanese, Tibetan, Nepali
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 2: What to Expect After You Enquire — 4-Step Consultation Pathway -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">OUR COMMITMENT</span>
+          <h2>What to expect after you submit your enquiry</h2>
+        </div>
+      </div>
+
+      <div class="pathway-grid">
+        <article class="pathway-card">
+          <div class="pathway-step-num">STEP 01 • WITHIN 24 HOURS</div>
+          <h3>Curatorial Review</h3>
+          <p>Your request is reviewed by a specialized faith-lineage travel coordinator who examines dates, festive calendars, and feasibility.</p>
+        </article>
+
+        <article class="pathway-card">
+          <div class="pathway-step-num">STEP 02 • DISCOVERY CALL</div>
+          <h3>1-on-1 Consultation</h3>
+          <p>We host a focused 20-minute Zoom or phone conversation to refine daily pacing, elder mobility, sanctum ceremonies, and dietary expectations.</p>
+        </article>
+
+        <article class="pathway-card">
+          <div class="pathway-step-num">STEP 03 • PROPOSAL DOSSIER</div>
+          <h3>Tailored Blueprint</h3>
+          <p>You receive an exquisite, clear proposal featuring day-by-day maps, verified hotel standards, verified vehicle details, and clear itemized pricing.</p>
+        </article>
+
+        <article class="pathway-card">
+          <div class="pathway-step-num">STEP 04 • PRE-DEPARTURE</div>
+          <h3>Sacred Briefing</h3>
+          <p>Before travel, receive your pilgrim pack containing dress code etiquette, temple guidelines, 24/7 ground contact numbers, and local cultural norms.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="app.js"></script>
+</body>
+</html>

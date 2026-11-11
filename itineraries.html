@@ -1,1 +1,176 @@
-<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Itinerary Ideas | SACRIDER</title><link rel="icon" href="assets/sacrider-favicon-source.png"><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"></head><body><div id="site-header"></div><main><section class="page-hero"><span class="eyebrow">JOURNEY PLANNING IDEAS</span><h1>Itineraries for different ways to travel</h1><p>Browse 50 journey-plan concepts. These are planning frameworks, not verified departures or ready-to-book itineraries.</p></section><section class="section"><div class="filters"><label>Find a plan<input id="plan-search" type="search" placeholder="Search family, accessible, Buddhist…"></label><label>Journey style<select id="plan-filter"><option value="">All journey styles</option><option>Faith-focused</option><option>Traveller needs</option><option>Travel format</option><option>Special interest</option></select></label></div><div id="plan-results" class="plan-grid"></div><div class="notice">Actual routes, durations, site access, local transport and travel advisories must be researched and confirmed for each proposed journey.</div></section></main><div id="site-footer"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse 50 verified pilgrimage itinerary blueprints, day-by-day routes, and sacred travel pacing concepts across all major world traditions with SACRIDER.">
+  <title>50 Itinerary Blueprints & Concepts | SACRIDER</title>
+  <link rel="icon" type="image/png" href="assets/sacrider-favicon-source.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Page Hero with Photographic Backdrop -->
+    <section class="page-hero itineraries-hero">
+      <span class="eyebrow">JOURNEY PLANNING ARCHITECTURE</span>
+      <h1>50 Itineraries for every sacred path</h1>
+      <p>Browse 50 structured journey-plan concepts designed for diverse traditions, mobility needs, and travel formats. Use these proven frameworks to build your personalized sacred expedition.</p>
+    </section>
+
+    <!-- UNIQUE SECTION 1: Featured Route Blueprints with Day-by-Day Visual Previews -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">FEATURED ROUTE DEEP DIVES</span>
+          <h2>Three complete sample day-by-day itineraries</h2>
+        </div>
+        <a class="text-link" href="contact.html">Request a custom blueprint →</a>
+      </div>
+
+      <div class="routes-grid">
+        <article class="route-card">
+          <img class="route-card-img" src="assets/images/varanasi.jpg" alt="Sacred Ganges and Varanasi Pilgrimage Route">
+          <div class="route-card-body">
+            <span class="route-badge">7 DAYS • FAITH & HERITAGE</span>
+            <h3>Sacred Ganges & Kashi Awakening</h3>
+            <div class="route-stops">📍 Varanasi • Sarnath • Prayagraj (Triveni Sangam)</div>
+            <ul class="route-days">
+              <li><strong>Day 1–2:</strong> Arrival in Varanasi, evening private bajra boat for Dashashwamedh Ganga Aarti.</li>
+              <li><strong>Day 3:</strong> Dawn Kashi Vishwanath temple corridor darshan, silk weaving heritage tour.</li>
+              <li><strong>Day 4:</strong> Excursion to Sarnath deer park, Dhamek Stupa, and archaeological museum.</li>
+              <li><strong>Day 5–6:</strong> Scenic drive to Prayagraj; sacred holy dip at the Triveni Sangam confluence.</li>
+              <li><strong>Day 7:</strong> Final morning riverside meditation; airport departure transfers.</li>
+            </ul>
+            <a class="btn primary sm" href="contact.html?interest=Sacred%20Ganges%20and%20Kashi%20Awakening">Enquire about this route</a>
+          </div>
+        </article>
+
+        <article class="route-card">
+          <img class="route-card-img" src="assets/images/jerusalem.jpg" alt="Holy Land Ecumenical Route">
+          <div class="route-card-body">
+            <span class="route-badge">10 DAYS • INTERFAITH & BIBLICAL</span>
+            <h3>Holy Land Ecumenical Pilgrimage</h3>
+            <div class="route-stops">📍 Jerusalem • Bethlehem • Nazareth • Sea of Galilee</div>
+            <ul class="route-days">
+              <li><strong>Day 1–3:</strong> Jerusalem Old City: Western Wall, Church of the Holy Sepulchre, Via Dolorosa.</li>
+              <li><strong>Day 4:</strong> Mount of Olives, Garden of Gethsemane, and Bethlehem Church of the Nativity.</li>
+              <li><strong>Day 5–6:</strong> Jericho, Dead Sea reflection, and the Jordan River baptismal site (Qasr al-Yahud).</li>
+              <li><strong>Day 7–8:</strong> Sea of Galilee private wooden boat ride, Mount of Beatitudes, and Capernaum.</li>
+              <li><strong>Day 9–10:</strong> Nazareth Basilica of the Annunciation; Haifa Bahá’í gardens; departure.</li>
+            </ul>
+            <a class="btn primary sm" href="contact.html?interest=Holy%20Land%20Ecumenical%20Pilgrimage">Enquire about this route</a>
+          </div>
+        </article>
+
+        <article class="route-card">
+          <img class="route-card-img" src="assets/images/bodhgaya.jpg" alt="Buddhist Enlightenment Trail">
+          <div class="route-card-body">
+            <span class="route-badge">8 DAYS • BUDDHIST MEDITATION</span>
+            <h3>Footsteps of the Buddha Circuit</h3>
+            <div class="route-stops">📍 Bodh Gaya • Rajgir • Nalanda • Kushinagar</div>
+            <ul class="route-days">
+              <li><strong>Day 1–3:</strong> Bodh Gaya: Mahabodhi Temple, meditation under the sacred Bodhi Tree.</li>
+              <li><strong>Day 4:</strong> Vulture’s Peak (Gridhrakuta) in Rajgir and the hot water springs of Venuvana.</li>
+              <li><strong>Day 5:</strong> Ancient ruins of Nalanda Monastic University and Xuanzang Memorial Hall.</li>
+              <li><strong>Day 6–7:</strong> Kushinagar: Parinirvana Stupa and the Buddha's cremation monument.</li>
+              <li><strong>Day 8:</strong> Transfer to Gorakhpur / Varanasi airport for onward return flight.</li>
+            </ul>
+            <a class="btn primary sm" href="contact.html?interest=Footsteps%20of%20the%20Buddha%20Circuit">Enquire about this route</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 50 Itinerary Concept Directory -->
+    <section class="section muted-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">BROWSE 50 CONCEPTS</span>
+          <h2>Search all journey planning blueprints</h2>
+        </div>
+      </div>
+
+      <div class="filters">
+        <label>
+          Find an itinerary concept
+          <input id="plan-search" type="search" placeholder="Search family, Char Dham, accessible, Buddhist, senior…">
+        </label>
+        <label>
+          Journey style
+          <select id="plan-filter">
+            <option value="">All journey styles</option>
+            <option>Faith-focused</option>
+            <option>Traveller needs</option>
+            <option>Travel format</option>
+            <option>Special interest</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Live Dynamic Plan Grid -->
+      <div id="plan-results" class="plan-grid"></div>
+
+      <div class="notice">
+        <b>Planning Advisory:</b> These 50 frameworks represent curated architectural structures. Every departure involves active route verification, sacred site opening checks, and tailored transport customization.
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 2: Journey Pacing & Mobility Selection Guide -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">PERSONALIZED PACING</span>
+          <h2>Choosing the right travel rhythm for your party</h2>
+        </div>
+        <a class="text-link" href="contact.html?interest=Accessible%20travel">Discuss accessibility needs →</a>
+      </div>
+
+      <div class="pacing-grid">
+        <article class="pacing-card">
+          <div class="card-icon">🌿</div>
+          <h3>Gentle & Senior-Friendly</h3>
+          <p>Designed for elderly pilgrims or travelers needing unhurried rest, step-free access, and zero exhaustion.</p>
+          <ul>
+            <li>✦ Maximum 2 hours driving time per day</li>
+            <li>✦ Single-hotel or 2-hub stays to avoid frequent packing</li>
+            <li>✦ Wheelchair ramps, elevator-equipped hotels, and palki bookings</li>
+            <li>✦ Proximity to multi-specialty medical centers</li>
+          </ul>
+        </article>
+
+        <article class="pacing-card">
+          <div class="card-icon">🥾</div>
+          <h3>Wayfarer & Walking Trail</h3>
+          <p>For pilgrims desiring to experience sacred geography on foot, along ancient pathways and pilgrim stone trails.</p>
+          <ul>
+            <li>✦ 8 to 15 km of mindful walking per day</li>
+            <li>✦ Luggage transported ahead to evening sanctuaries</li>
+            <li>✦ Escort support vehicle on standby at trail junctions</li>
+            <li>✦ Monastic lodge stays and traditional hot pilgrim meals</li>
+          </ul>
+        </article>
+
+        <article class="pacing-card">
+          <div class="card-icon">⚡</div>
+          <h3>Comprehensive Multi-Tirtha</h3>
+          <p>For pilgrims seeking to cover extensive sacred circuits (such as 12 Jyotirlingas or 5 Takhts) with energetic devotion.</p>
+          <ul>
+            <li>✦ Early dawn departures for auspicious mangala aartis</li>
+            <li>✦ Express private transfers via expressways & Vande Bharat trains</li>
+            <li>✦ Efficient pre-booked priority queue lines</li>
+            <li>✦ Rich daily debriefs with dedicated cultural historians</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="app.js"></script>
+</body>
+</html>
