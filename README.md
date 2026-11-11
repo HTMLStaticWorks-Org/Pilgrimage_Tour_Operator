@@ -15,7 +15,8 @@ The platform features a dual-home architecture catering to both global cultural 
    * **Photographic Faith Grid**: 8 world traditions (Hindu, Islamic, Christian, Sikh, Buddhist, Jain, Jewish, Interfaith) with photography and golden emblems.
    * **Unique Section 1: The Sacred Calendar**: Comprehensive 4-season pilgrimage timing guide (Spring Renewal, Summer High Passes, Autumn Devotion, Winter Reflection).
    * **Unique Section 2: Sacred Etiquette & Protocol Guide**: 4 pillars covering traditional attire, photography demarcations, footwear/purity, and prasad/offerings.
-   * **Unique Section 3: Voices from the Sacred Path**: Verified multi-generational pilgrim testimonials with accredited route badges.
+   * **Unique Section 3: Voices from the Sacred Path**: Verified multi-generational pilgrim testimonials with accredited route badges across world traditions.
+   * **Bespoke Planning Pathways**: Dedicated consultation routes for multi-generational families, scholar-escorted devotional circuits, and accessible mobility care.
 
 2. **`home-premium.html` — Home 2 (The Private Sacred Journey Collection)**
    * **Hero Section**: Twilight-illuminated sacred temple with royal gold orbit badge and bespoke concierge value proposition.
@@ -58,7 +59,7 @@ The platform features a dual-home architecture catering to both global cultural 
    * **Hero Banner**: Panoramic photo banner with faith badge, VIP seal, and rating.
    * **Main Dossier**: Spiritual significance, key rituals/ceremonies, dress codes, photography rules, verified donations.
    * **Sidebar**: Planning snapshot, companion sacred sites, senior accessibility assistance, previous/next destination buttons.
-   * **Unique Section 1: Sacred Journey Attire & Sanctum Preparation Protocol**: 4 practical visual cards on vestments, footwear cloakrooms, sacred water vessels, and silence decorum.
+   * **Unique Section 1: On-Site Custodial Facilitation & Ceremonial Guidelines**: 4 practical visual cards on temple trust liaisons, priestly lineage rites, consecrated offerings, and circumambulation etiquette.
    * **Unique Section 2: Traveler Assurance, Accessibility & Emergency Readiness**: 3 safety cards covering oxygen support, palki/doli accessibility, and certified trust receipts.
 
 ---
@@ -80,7 +81,7 @@ All 37 curated, high-definition photographic assets are stored locally in `asset
 
 * **Royal Gold & Obsidian Palette**: Deep obsidian (`#120f0a`), antique gold (`#b88b36`), champagne gold (`#e7c879`), warm ivory silk (`#fcfaf5`).
 * **Balanced Card Architecture**: All cards across all grids feature uniform heights, flexbox content distribution, subtle gold foil rims, dual drop shadows, and scale micro-interactions on hover.
-* **Top Credential Bar**: Pre-header displaying accredited operator credentials, 24/7 concierge phone number, and active travel support.
+* **Clean Unified Header**: Sticky navigation header with brand identity, quick route discovery, and direct proposal request CTA.
 * **Smart URL Parameter Support**: Clicking any faith card on Home automatically filters the destination directory upon arrival (e.g. `destinations.html?faith=Hindu`).
 * **Interactive Navigation**: Header menu includes both **Home** and **Home 2**, with active state tracking.
 * **Accessibility & Global Support**: Full dark-mode toggle, bidirectional LTR/RTL layout toggle, and `@media print` clean dossier export.

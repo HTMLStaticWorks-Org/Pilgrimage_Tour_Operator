@@ -11,33 +11,32 @@ const current=location.pathname.split("/").pop()||"index.html";
 
 document.getElementById("site-header").innerHTML=`
 <header class="site-header">
-  <div class="top-operator-bar">
-    <div class="operator-bar-inner">
-      <div class="operator-credentials">
-        <span>✦ ACREDITED GLOBAL PILGRIMAGE OPERATOR</span>
-        <span class="dot-sep">•</span>
-        <span>VERIFIED TEMPLE TRUST & SANCTUM PERMITS</span>
-        <span class="dot-sep">•</span>
-        <span>MULTI-FAITH CONCIERGE DESK</span>
-      </div>
-      <div class="operator-contact-quick">
-        <a href="contact.html" class="quick-call"><span>📞 Private Concierge:</span> +1 (800) 722-7433</a>
-        <span class="dot-sep">•</span>
-        <span class="lang-cur">🌐 EN | 24/7 ACTIVE TRAVEL SUPPORT</span>
-      </div>
-    </div>
-  </div>
   <div class="nav-wrap">
     <a class="brand" href="index.html" aria-label="SACRIDER home">
       <img src="assets/sacrider-horizontal-logo.png" alt="SACRIDER — Every Faith. Every Sacred Journey.">
     </a>
-    <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open navigation">☰</button>
-    <nav class="nav-links" id="nav-links">
-      ${navItems.map(([n,u])=>`<a class="${(current===u || (current==='' && u==='index.html'))?'active':''}" href="${u}">${n}</a>`).join("")}
+    <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+      <div class="nav-links-list">
+        ${navItems.map(([n,u])=>`<a class="${(current===u || (current==='' && u==='index.html'))?'active':''}" href="${u}">${n}</a>`).join("")}
+      </div>
+      <div class="nav-menu-tools">
+        <div class="nav-menu-toggles">
+          <button type="button" class="nav-menu-tool-btn theme-toggle-btn" title="Toggle light and dark mode" aria-label="Toggle theme">
+            <span class="theme-btn-icon">☼</span>
+            <span class="theme-btn-label">Light Mode</span>
+          </button>
+          <button type="button" class="nav-menu-tool-btn direction-toggle-btn" title="Switch text direction (LTR / RTL)" aria-label="Switch text direction">
+            <span class="dir-btn-icon">⇄</span>
+            <span class="dir-btn-label">RTL</span>
+          </button>
+        </div>
+        <a class="btn primary full-width menu-cta" href="contact.html?interest=Bespoke%20Pilgrimage%20Proposal">Request Proposal</a>
+      </div>
     </nav>
-    <div class="nav-tools">
-      <button class="icon-btn" id="theme-toggle" title="Toggle light and dark mode" aria-label="Toggle theme">☼</button>
-      <button class="icon-btn" id="direction-toggle" title="Switch LTR / RTL" aria-label="Switch text direction">⇄</button>
+    <div class="nav-tools desktop-nav-tools">
+      <button class="icon-btn theme-toggle-btn" id="theme-toggle" title="Toggle light and dark mode" aria-label="Toggle theme">☼</button>
+      <button class="icon-btn text-toggle-btn direction-toggle-btn" id="direction-toggle" title="Switch text direction (LTR / RTL)" aria-label="Switch text direction">RTL</button>
       <a class="btn primary sm header-cta" href="contact.html?interest=Bespoke%20Pilgrimage%20Proposal">Request Proposal</a>
     </div>
   </div>
@@ -49,57 +48,148 @@ document.getElementById("site-footer").innerHTML=`
     <div>
       <img class="footer-logo" src="assets/sacrider-horizontal-logo.png" alt="SACRIDER">
       <p class="footer-tagline"><strong>Every Faith. Every Sacred Journey.</strong></p>
-      <p class="footer-desc">The world’s premier private pilgrimage tour operator and sacred heritage discovery platform. Curating reverent, ultra-bespoke journeys honoring the sanctity, customs, and deep spiritual heritage of every holy destination.</p>
-      <div class="footer-trust-badges">
-        <span>✦ Licensed World Heritage & Faith Tour Operator</span>
-        <span>✦ Direct Liaison with Official Temple Trusts & Shrines</span>
-        <span>✦ 100% Verified Elder-Safe & Accessible Logistics</span>
-        <span>✦ 24/7 Dedicated On-Ground Physician Liaison</span>
+      <p class="footer-desc">Private pilgrimage expeditions and sacred heritage journeys honoring traditions worldwide.</p>
+      <div class="footer-social-icons">
+        <a href="https://instagram.com" class="social-icon-btn" aria-label="SACRIDER on Instagram" title="Instagram" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://youtube.com" class="social-icon-btn" aria-label="SACRIDER on YouTube" title="YouTube" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://facebook.com" class="social-icon-btn" aria-label="SACRIDER on Facebook" title="Facebook" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://x.com" class="social-icon-btn" aria-label="SACRIDER on X" title="X" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
       </div>
     </div>
     <div>
-      <h4>SACRED EXPEDITIONS</h4>
+      <h4>EXPLORE</h4>
       <div class="footer-links">
-        <a href="destinations.html">Global Sacred Directory (1,000+ Target)</a>
-        <a href="packages.html">Curated Pilgrimage Packages & Tiers</a>
-        <a href="itineraries.html">50 Master Itinerary Blueprints</a>
-        <a href="home-premium.html">Home 2 — Private Bespoke Journeys</a>
-        <a href="index.html">Home 1 — Global Heritage Portal</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="itineraries.html">Itineraries</a>
+        <a href="home-premium.html">Home 2 (Private)</a>
       </div>
     </div>
     <div>
-      <h4>CONCIERGE & ADVISORY</h4>
+      <h4>CONCIERGE</h4>
       <div class="footer-links">
-        <a href="about.html">About SACRIDER & Advisory Board</a>
-        <a href="contact.html">Request a Bespoke Proposal</a>
-        <a href="contact.html?interest=Group%20pilgrimage">Group Pilgrimage Coordination</a>
-        <a href="contact.html?interest=Senior-friendly%20slower-paced">Senior & Mobility Care Desk</a>
+        <a href="about.html">About SACRIDER</a>
+        <a href="contact.html">Request Proposal</a>
+        <a href="contact.html?interest=Accessible%20travel">Accessibility Care</a>
       </div>
       <div class="operator-service-card">
-        <strong>VIP PILGRIMAGE CONCIERGE</strong>
-        <p>Direct lines open daily for private families and spiritual leaders.<br>Email: <b>concierge@sacrider.org</b></p>
+        <strong>CONCIERGE DESK</strong>
+        <p>Email: <b>concierge@sacrider.org</b></p>
       </div>
     </div>
   </div>
   <div class="copyright">
-    <div>© ${new Date().getFullYear()} SACRIDER Luxury Pilgrimage Expeditions. All Rights Reserved. Preserving reverence, promoting intercultural understanding.</div>
-    <div class="footer-sub-links"><a href="about.html">Sacred Charter</a> · <a href="contact.html">Travel Advisory</a> · <a href="home-premium.html">Home 2 Private</a></div>
+    <div>© ${new Date().getFullYear()} SACRIDER. All Rights Reserved.</div>
+    <div class="footer-sub-links"><a href="about.html">Sacred Charter</a> · <a href="contact.html">Travel Advisory</a></div>
   </div>
-</footer>`;
+</footer>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <span class="btt-icon" aria-hidden="true">▲</span>
+  <span class="btt-text">TOP</span>
+</button>`;
 
 const body=document.body,html=document.documentElement;
 if(localStorage.getItem("sacrider-theme")==="dark")body.classList.add("dark");
 if(localStorage.getItem("sacrider-dir")==="rtl")html.dir="rtl";
 
-document.getElementById("theme-toggle")?.addEventListener("click",()=>{
-  body.classList.toggle("dark");
-  localStorage.setItem("sacrider-theme",body.classList.contains("dark")?"dark":"light");
+function updateThemeUI(){
+  const isDark = body.classList.contains("dark");
+  document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+    const icon = btn.querySelector(".theme-btn-icon");
+    const label = btn.querySelector(".theme-btn-label");
+    if(icon){
+      icon.textContent = isDark ? "☾" : "☼";
+    }
+    if(label){
+      label.textContent = isDark ? "Dark Mode" : "Light Mode";
+    }
+    if(!icon && !label){
+      btn.textContent = isDark ? "☾" : "☼";
+    }
+    btn.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+  });
+}
+
+function updateDirUI(){
+  const isRtl = html.dir === "rtl";
+  document.querySelectorAll(".direction-toggle-btn").forEach(btn => {
+    const label = btn.querySelector(".dir-btn-label");
+    if(label){
+      label.textContent = isRtl ? "LTR" : "RTL";
+    }else{
+      btn.textContent = isRtl ? "LTR" : "RTL";
+    }
+    btn.setAttribute("title", isRtl ? "Switch to Left-to-Right" : "Switch to Right-to-Left (RTL)");
+  });
+}
+
+document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("sacrider-theme", body.classList.contains("dark") ? "dark" : "light");
+    updateThemeUI();
+  });
 });
-document.getElementById("direction-toggle")?.addEventListener("click",()=>{
-  html.dir=html.dir==="rtl"?"ltr":"rtl";
-  localStorage.setItem("sacrider-dir",html.dir);
+
+document.querySelectorAll(".direction-toggle-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+    localStorage.setItem("sacrider-dir", html.dir);
+    updateDirUI();
+  });
 });
-document.getElementById("menu-toggle")?.addEventListener("click",()=>document.getElementById("nav-links")?.classList.toggle("open"));
+
+updateThemeUI();
+updateDirUI();
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+if(menuToggle && navLinks){
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+  });
+
+  document.addEventListener("click", (e) => {
+    if(navLinks.classList.contains("open") && !navLinks.contains(e.target) && !menuToggle.contains(e.target)){
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    }
+  });
+
+  navLinks.querySelectorAll(".nav-links-list a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    });
+  });
+}
+
+const btt=document.getElementById("back-to-top");
+if(btt){
+  window.addEventListener("scroll",()=>{
+    if(window.scrollY>260){
+      btt.classList.add("visible");
+    }else{
+      btt.classList.remove("visible");
+    }
+  },{passive:true});
+  btt.addEventListener("click",()=>{
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+}
 
 const destinations=[
   {
