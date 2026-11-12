@@ -1,10 +1,10 @@
 const navItems=[
   ["Home","index.html"],
   ["Home 2","home-premium.html"],
+  ["About","about.html"],
   ["Destinations","destinations.html"],
   ["Tour packages","packages.html"],
   ["Itineraries","itineraries.html"],
-  ["About","about.html"],
   ["Contact","contact.html"]
 ];
 const current=location.pathname.split("/").pop()||"index.html";
