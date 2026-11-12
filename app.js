@@ -197,7 +197,7 @@ const destinations=[
     country:"India",
     faith:"Hindu",
     type:"Sacred landscape",
-    image:"assets/images/varanasi.jpg",
+    image:"assets/images/Varanasi1.jpg",
     season:"Oct – Mar (Dev Deepawali & Mahashivratri)",
     duration:"4–6 Days",
     rating:"★ 4.98 (340+ Pilgrims)",
@@ -213,7 +213,7 @@ const destinations=[
     country:"India",
     faith:"Hindu",
     type:"Temple",
-    image:"assets/images/tirupati.jpg",
+    image:"assets/images/Tirupati1.avif",
     season:"Sep – Feb (Pleasant weather, Brahmotsavam)",
     duration:"3–4 Days",
     rating:"★ 4.99 (480+ Pilgrims)",
@@ -229,7 +229,7 @@ const destinations=[
     country:"India",
     faith:"Buddhist",
     type:"Sacred landscape",
-    image:"assets/images/bodhgaya.jpg",
+    image:"assets/images/Bodh Gaya.jpg",
     season:"Oct – Mar (Annual Kagyu Monlam & Kalachakra)",
     duration:"3–5 Days",
     rating:"★ 4.97 (220+ Pilgrims)",
@@ -245,7 +245,7 @@ const destinations=[
     country:"India",
     faith:"Sikh",
     type:"Gurudwara",
-    image:"assets/images/goldentemple.jpg",
+    image:"assets/images/Golden Temple.jpg",
     season:"Oct – Mar (Baisakhi & Guru Nanak Gurpurab)",
     duration:"3–4 Days",
     rating:"★ 5.0 (520+ Pilgrims)",
@@ -261,7 +261,7 @@ const destinations=[
     country:"India",
     faith:"Islam",
     type:"Shrine",
-    image:"assets/images/ajmer.jpg",
+    image:"assets/images/Ajmer11.webp",
     season:"Oct – Apr (Annual Urs of Khwaja Moinuddin Chishti)",
     duration:"2–3 Days",
     rating:"★ 4.95 (190+ Pilgrims)",
@@ -277,7 +277,7 @@ const destinations=[
     country:"Vatican City",
     faith:"Christian",
     type:"Church",
-    image:"assets/images/vatican.jpg",
+    image:"assets/images/Vatican City.jpg",
     season:"Apr – May & Sep – Oct (Spring & Autumn)",
     duration:"3–5 Days",
     rating:"★ 4.98 (410+ Pilgrims)",
@@ -293,7 +293,7 @@ const destinations=[
     country:"Israel / Palestine",
     faith:"Interfaith",
     type:"Sacred landscape",
-    image:"assets/images/jerusalem.jpg",
+    image:"assets/images/jerusalem-old-city.webp",
     season:"Mar – May & Oct – Nov (Mild temperatures)",
     duration:"5–8 Days",
     rating:"★ 4.99 (380+ Pilgrims)",
@@ -309,7 +309,7 @@ const destinations=[
     country:"Nepal",
     faith:"Buddhist",
     type:"Sacred landscape",
-    image:"assets/images/lumbini.jpg",
+    image:"assets/images/Lumbini1.jpg",
     season:"Oct – Mar (Clear Himalayan skies)",
     duration:"3–4 Days",
     rating:"★ 4.96 (160+ Pilgrims)",
@@ -325,7 +325,7 @@ const destinations=[
     country:"Japan",
     faith:"Buddhist",
     type:"Sacred landscape",
-    image:"assets/images/shikoku.jpg",
+    image:"assets/images/Shikoku12.jfif",
     season:"Spring (Mar – May) & Autumn (Sep – Nov)",
     duration:"10–45 Days (Full or Curated Stages)",
     rating:"★ 4.99 (140+ Pilgrims)",
@@ -341,7 +341,7 @@ const destinations=[
     country:"China (Tibet)",
     faith:"Hindu",
     type:"Sacred landscape",
-    image:"assets/images/kailash.jpg",
+    image:"assets/images/MountKailash.jfif",
     season:"May – Sep (High-altitude pass accessibility)",
     duration:"14–18 Days",
     rating:"★ 4.98 (110+ Pilgrims)",
@@ -357,7 +357,7 @@ const destinations=[
     country:"Israel",
     faith:"Bahá’í",
     type:"Shrine",
-    image:"assets/images/bahai.jpg",
+    image:"assets/images/Bahai1.avif",
     season:"All year (Optimal Oct – Apr)",
     duration:"2–3 Days",
     rating:"★ 4.97 (175+ Pilgrims)",
@@ -373,7 +373,7 @@ const destinations=[
     country:"India / Iran",
     faith:"Zoroastrian",
     type:"Sacred landscape",
-    image:"assets/images/zoroastrian.jpg",
+    image:"assets/images/ZoroastrianFire.avif",
     season:"Nov – Feb (Pleasant exploration weather)",
     duration:"4–6 Days",
     rating:"★ 4.95 (85+ Pilgrims)",
@@ -706,5 +706,21 @@ if(form){
       status.innerHTML=`<div class="success-alert">✓ Thank you. Your bespoke pilgrimage inquiry has been prioritized. A dedicated SACRIDER faith travel concierge will prepare a tailored dossier within 24 hours.</div>`;
     }
     form.reset();
+  });
+}
+
+// Hero Traveler Visual Style Toggle (Devotional Palette vs Classic Line Art)
+const travelerToggle = document.getElementById("travelerStyleToggle");
+if (travelerToggle) {
+  const travelerImg = document.getElementById("heroTravelerImg");
+  travelerToggle.addEventListener("click", () => {
+    if (!travelerImg) return;
+    const isColored = travelerImg.src.includes("colored");
+    travelerImg.src = isColored ? travelerImg.dataset.classic : travelerImg.dataset.colored;
+    const label = travelerToggle.querySelector(".toggle-text");
+    if (label) {
+      label.textContent = isColored ? "Palette" : "Line Art";
+    }
+    travelerToggle.setAttribute("title", isColored ? "Switch back to Devotional Color" : "Switch to Classic Line Art");
   });
 }

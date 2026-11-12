@@ -1,0 +1,621 @@
+<div class="faith-grid">
+        <a class="faith-card" style="background-image: url('assets/images/faith-hindu.jpg');" href="destinations.html?faith=Hindu">
+          <span>ॐ</span>
+          <b>Hindu Traditions</b>
+          <small>River tirthas, jyotirlingas & coastal temples</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-islam.jpg');" href="destinations.html?faith=Islam">
+          <span>☾</span>
+          <b>Islamic Heritage</b>
+          <small>Sufi dargahs, historic mosques & Ziyarat</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-christian.jpg');" href="destinations.html?faith=Christian">
+          <span>✝</span>
+          <b>Christian Pilgrimage</b>
+          <small>Holy Land routes, basilicas & Camino trails</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-sikh.jpg');" href="destinations.html?faith=Sikh">
+          <span>☬</span>
+          <b>Sikh Heritage</b>
+          <small>Five Takhts, historical gurudwaras & seva</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-buddhist.jpg');" href="destinations.html?faith=Buddhist">
+          <span>☸</span>
+          <b>Buddhist Circuit</b>
+          <small>Four holy sites, Bodhi Tree & gompas</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-jain.jpg');" href="destinations.html?faith=Jain">
+          <span>◈</span>
+          <b>Jain Tirthas</b>
+          <small>Palitana marble shrines & ahimsa paths</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-jewish.jpg');" href="destinations.html?faith=Jewish">
+          <span>✡</span>
+          <b>Jewish Heritage</b>
+          <small>Jerusalem Old City & sacred landscapes</small>
+        </a>
+        <a class="faith-card" style="background-image: url('assets/images/faith-interfaith.jpg');" href="destinations.html?faith=Interfaith">
+          <span>✧</span>
+          <b>Interfaith & Living Paths</b>
+          <small>Bahá’í gardens & sacred nature shrines</small>
+        </a>
+      </div>
+
+      <!-- Live Dynamic Destination Grid with Photos -->
+      <div id="destination-results" class="destination-grid">
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/varanasi.jpg" alt="Varanasi" loading="lazy">
+            <span class="destination-badge">Hindu SACRED SITE</span>
+            <span class="operator-vip-ribbon">VIP Kashi Vishwanath & Private Ghat Bajra</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.98 (340+ Pilgrims)</span>
+              <span class="location-chip">📍 India</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">HINDU · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Varanasi</h3>
+            <p class="dest-feature-banner">✦ Holy River & Ancient Ghats</p>
+            <p class="dest-summary">One of the oldest continuously inhabited sacred cities in the world, reverently lining the sacred River Ganges. A profound center of prayer, life rituals, and moksha.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Oct – Mar (Dev Deepawali & Mahashivratri)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 4–6 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Private Wooden Bajra • Sanskrit Scholar Guide • Taj Ganges Heritage Haven</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Ganga Aarti at Dashashwamedh Ghat</span>
+            <span class="highlight-tag">♦ Kashi Vishwanath Corridor VIP Darshan</span>
+            <span class="highlight-tag">♦ Dawn boat pilgrimage with Vedic chants</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=0">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Varanasi%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/Tirupati1.avif" alt="Tirupati (Sri Venkateswara)" loading="lazy">
+            <span class="destination-badge">Hindu SACRED SITE</span>
+            <span class="operator-vip-ribbon">Sanctioned Special Entry SED Darshan Pass</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.99 (480+ Pilgrims)</span>
+              <span class="location-chip">📍 India</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">HINDU · TEMPLE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Tirupati (Sri Venkateswara)</h3>
+            <p class="dest-feature-banner">✦ Seven Sacred Hills</p>
+            <p class="dest-summary">The world's most visited sacred pilgrimage shrine, situated atop the scenic Tirumala Hills in Andhra Pradesh, venerated as the earthly home of Lord Venkateswara.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Sep – Feb (Pleasant weather, Brahmotsavam)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 3–4 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Pre-booked Special Entry Token • Private Hill Transfer • Sacred Laddu Prasadam Box</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Lord Venkateswara Sanctum Darshan</span>
+            <span class="highlight-tag">♦ Seven Sacred Hills (Seshachalam) Circuit</span>
+            <span class="highlight-tag">♦ Sacred Tirupati Laddu Prasadam</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=1">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Tirupati%20%28Sri%20Venkateswara%29%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/bodhgaya.jpg" alt="Bodh Gaya" loading="lazy">
+            <span class="destination-badge">Buddhist SACRED SITE</span>
+            <span class="operator-vip-ribbon">Dawn Meditation Pass under Sacred Bodhi Tree</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.97 (220+ Pilgrims)</span>
+              <span class="location-chip">📍 India</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">BUDDHIST · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Bodh Gaya</h3>
+            <p class="dest-feature-banner">✦ Enlightenment Sanctum</p>
+            <p class="dest-summary">The most sacred pilgrimage ground in Buddhism, where Siddhartha Gautama meditated beneath the Bodhi Tree and attained complete Enlightenment.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Oct – Mar (Annual Kagyu Monlam & Kalachakra)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 3–5 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Senior Monastic Scholar • Private Butter Lamp Ceremony • 5★ Heritage Serenity Stay</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Mahabodhi Temple UNESCO World Heritage</span>
+            <span class="highlight-tag">♦ Sacred Bodhi Tree & Diamond Throne (Vajrasana)</span>
+            <span class="highlight-tag">♦ International Buddhist Monasteries (Thai, Tibetan, Japanese)</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=2">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Bodh%20Gaya%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/goldentemple.jpg" alt="Golden Temple (Harmandir Sahib)" loading="lazy">
+            <span class="destination-badge">Sikh SACRED SITE</span>
+            <span class="operator-vip-ribbon">Guided Palki Sahib Ceremony & VIP Langar Seva</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 5.0 (520+ Pilgrims)</span>
+              <span class="location-chip">📍 India</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">SIKH · GURUDWARA</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Golden Temple (Harmandir Sahib)</h3>
+            <p class="dest-feature-banner">✦ Sanctuary of Universal Equality</p>
+            <p class="dest-summary">The spiritual heart of Sikhism in Amritsar, welcoming all people regardless of caste, faith, or background with open doors in all four cardinal directions.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Oct – Mar (Baisakhi & Guru Nanak Gurpurab)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 3–4 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Dedicated Sikh Historian • Private Parikrama Escort • Heritage Haveli Suite</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Harmandir Sahib Golden Sanctum Darshan</span>
+            <span class="highlight-tag">♦ Langar (24/7 holy community kitchen seva)</span>
+            <span class="highlight-tag">♦ Amrit Sarovar Holy Pool Circumambulation</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=3">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Golden%20Temple%20%28Harmandir%20Sahib%29%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/ajmer.jpg" alt="Ajmer Sharif Dargah" loading="lazy">
+            <span class="destination-badge">Islam SACRED SITE</span>
+            <span class="operator-vip-ribbon">Hereditary Khadim Escort & Courtyard Qawwali Seating</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.95 (190+ Pilgrims)</span>
+              <span class="location-chip">📍 India</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">ISLAM · SHRINE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Ajmer Sharif Dargah</h3>
+            <p class="dest-feature-banner">✦ Sufi Sanctuary of Harmony</p>
+            <p class="dest-summary">The revered 13th-century Sufi shrine of Khwaja Moinuddin Chishti, renowned across South Asia as a beacon of compassion, spiritual solace, and interfaith fellowship.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Oct – Apr (Annual Urs of Khwaja Moinuddin Chishti)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 2–3 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Private Chhati Sharif Pass • Degs Blessed Niyaz Distribution • Chauffeur Driven SUV</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Mazar of Khwaja Garib Nawaz blessing</span>
+            <span class="highlight-tag">♦ Chhati Sharif Monthly Observance</span>
+            <span class="highlight-tag">♦ Historic Mughal Cauldrons (Degs) food sharing</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=4">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Ajmer%20Sharif%20Dargah%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/vatican.jpg" alt="Vatican City & St. Peter's" loading="lazy">
+            <span class="destination-badge">Christian SACRED SITE</span>
+            <span class="operator-vip-ribbon">Papal Audience Reserved Invitation & Early Crypt Entry</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.98 (410+ Pilgrims)</span>
+              <span class="location-chip">📍 Vatican City</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">CHRISTIAN · CHURCH</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Vatican City & St. Peter's</h3>
+            <p class="dest-feature-banner">✦ Apostolic Seat & Holy See</p>
+            <p class="dest-summary">The universal center of the Roman Catholic Church, built over the tomb of Saint Peter, featuring breathtaking Renaissance art, sacred basilicas, and living papal tradition.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Apr – May & Sep – Oct (Spring & Autumn)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 3–5 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Vatican Accredited Art Historian • Private Early Sistine Chapel • 5★ Hotel de Russie Stay</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ St. Peter’s Basilica, Cupola & Apostolic Crypt</span>
+            <span class="highlight-tag">♦ Wednesday Papal General Audience Blessing</span>
+            <span class="highlight-tag">♦ Sistine Chapel & Vatican Secret Archives</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=5">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Vatican%20City%20%26%20St.%20Peter%27s%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/jerusalem.jpg" alt="Jerusalem Old City" loading="lazy">
+            <span class="destination-badge">Interfaith SACRED SITE</span>
+            <span class="operator-vip-ribbon">Western Wall Tunnels Private Access & Sepulchre Tour</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.99 (380+ Pilgrims)</span>
+              <span class="location-chip">📍 Israel / Palestine</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">INTERFAITH · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Jerusalem Old City</h3>
+            <p class="dest-feature-banner">✦ Cradle of Abrahamic Faiths</p>
+            <p class="dest-summary">A profound, ancient city sacred to Judaism, Christianity, and Islam for millennia. A living sanctuary where three world faiths pray within walking distance.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Mar – May & Oct – Nov (Mild temperatures)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 5–8 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Dual-Perspective Theologian Guide • Private King David Hotel Suite • VIP Border Escort</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Western Wall (Kotel) private prayer</span>
+            <span class="highlight-tag">♦ Church of the Holy Sepulchre & Calvary</span>
+            <span class="highlight-tag">♦ Dome of the Rock & Al-Aqsa historical compound</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=6">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Jerusalem%20Old%20City%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/lumbini.jpg" alt="Lumbini" loading="lazy">
+            <span class="destination-badge">Buddhist SACRED SITE</span>
+            <span class="operator-vip-ribbon">Private Monastic Garden Chanting & Ashoka Marker Access</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.96 (160+ Pilgrims)</span>
+              <span class="location-chip">📍 Nepal</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">BUDDHIST · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Lumbini</h3>
+            <p class="dest-feature-banner">✦ Birthplace of the Buddha</p>
+            <p class="dest-summary">A UNESCO World Heritage sanctuary in the Terai plains of Nepal, preserved as the peaceful birthplace of Siddhartha Gautama in the 6th century BCE.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Oct – Mar (Clear Himalayan skies)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 3–4 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Monastic Liaison Scholar • Private Monastic Zone Electric Cart • Boutique Eco-Lodge</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Maya Devi Temple & Historic Marker Stone</span>
+            <span class="highlight-tag">♦ Ashoka Pillar (dating back to 249 BCE)</span>
+            <span class="highlight-tag">♦ Sacred Puskarini holy bathing pond</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=7">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Lumbini%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/Shikoku12.jfif" alt="Shikoku 88 Temple Circuit" loading="lazy">
+            <span class="destination-badge">Buddhist SACRED SITE</span>
+            <span class="operator-vip-ribbon">Curated Shukubo Monastic Temple Stays & Henro Master</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.99 (140+ Pilgrims)</span>
+              <span class="location-chip">📍 Japan</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">BUDDHIST · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Shikoku 88 Temple Circuit</h3>
+            <p class="dest-feature-banner">✦ Way of Kōbō Daishi</p>
+            <p class="dest-summary">An ancient 1,200 km pilgrimage loop visiting 88 sacred Buddhist temples connected with the revered 8th-century monk Kōbō Daishi (Kūkai) across Shikoku island.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Spring (Mar – May) & Autumn (Sep – Nov)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 10–45 Days (Full or Curated Stages) Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Full Henro Pilgrim Attire & Staff • Private Luggage Forwarding • Hot Spring Ryokan Stays</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Ryozenji Temple (Station 1 consecrated start)</span>
+            <span class="highlight-tag">♦ Okuboji Temple (Station 88 completion)</span>
+            <span class="highlight-tag">♦ Scenic coastal Pacific walking stages</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=8">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Shikoku%2088%20Temple%20Circuit%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/MountKailash.jfif" alt="Mount Kailash & Lake Manasarovar" loading="lazy">
+            <span class="destination-badge">Hindu SACRED SITE</span>
+            <span class="operator-vip-ribbon">High-Altitude Medical Team & Private Parikrama Sherpas</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.98 (110+ Pilgrims)</span>
+              <span class="location-chip">📍 China (Tibet)</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">HINDU · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Mount Kailash & Lake Manasarovar</h3>
+            <p class="dest-feature-banner">✦ Axis Mundi & Cosmic Mountain</p>
+            <p class="dest-summary">The revered 6,638m pyramidal mountain venerated in Hinduism as Lord Shiva's abode, in Buddhism as Mount Meru, and in Jainism and Bon as their primordial sacred summit.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ May – Sep (High-altitude pass accessibility)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 14–18 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Medical Officer with Hyperbaric Chamber • 4x4 Land Cruisers • Private Kitchen Yurt</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ 52 km Sacred Parikrama (Kora) around Mount Kailash</span>
+            <span class="highlight-tag">♦ Crossing the high Dolma La Pass (5,630m)</span>
+            <span class="highlight-tag">♦ Lake Manasarovar sacred waters holy dip</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=9">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Mount%20Kailash%20%26%20Lake%20Manasarovar%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/Bahai1.avif" alt="Bahá’í Terraced Gardens & Shrine" loading="lazy">
+            <span class="destination-badge">Bahá’í SACRED SITE</span>
+            <span class="operator-vip-ribbon">Official World Centre Curated Garden Escort</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.97 (175+ Pilgrims)</span>
+              <span class="location-chip">📍 Israel</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">BAHÁ’Í · SHRINE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Bahá’í Terraced Gardens & Shrine</h3>
+            <p class="dest-feature-banner">✦ Gardens of Unity & Light</p>
+            <p class="dest-summary">A world heritage masterpiece of geometry, horticulture, and spiritual light on the slopes of Mount Carmel, representing peace, human unity, and contemplation.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ All year (Optimal Oct – Apr)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 2–3 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Private Horticulture & Faith Historian • Luxury Mount Carmel Suite • Chauffeur</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Shrine of the Báb golden dome</span>
+            <span class="highlight-tag">♦ 19 Terraced hanging gardens on Mount Carmel</span>
+            <span class="highlight-tag">♦ Bahá’í World Centre historic archive</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=10">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Bah%C3%A1%E2%80%99%C3%AD%20Terraced%20Gardens%20%26%20Shrine%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <div class="destination-card-media">
+            <img class="destination-card-img" src="assets/images/ZoroastrianFire.avif" alt="Historic Zoroastrian Fire Temples & Towers" loading="lazy">
+            <span class="destination-badge">Zoroastrian SACRED SITE</span>
+            <span class="operator-vip-ribbon">Parsi Community Liaison & Udvada Heritage Darshan</span>
+            <div class="destination-card-overlay">
+              <span class="rating-badge">★ 4.95 (85+ Pilgrims)</span>
+              <span class="location-chip">📍 India / Iran</span>
+            </div>
+          </div>
+          <div class="destination-card-body">
+            <div class="card-eyebrow-row">
+              <span class="meta">ZOROASTRIAN · SACRED LANDSCAPE</span>
+              <span class="card-verified-tag">✓ CONCIERGE VERIFIED</span>
+            </div>
+            <h3 class="card-title">Historic Zoroastrian Fire Temples & Towers</h3>
+            <p class="dest-feature-banner">✦ Eternal Consecrated Flame</p>
+            <p class="dest-summary">Ancient sanctuaries of Asha (truth) and living light, preserving the sacred fire traditions and venerable philosophical wisdom of Zarathustra.</p>
+            
+            <div class="dest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">OPTIMAL SEASON</span>
+                <span class="spec-val">🗓️ Nov – Feb (Pleasant exploration weather)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">JOURNEY PACING</span>
+                <span class="spec-val">⏱️ 4–6 Days Private Tour</span>
+              </div>
+            </div>
+
+            <div class="dest-inclusions-bar">
+              <strong>OPERATOR INCLUSIONS:</strong>
+              <span>Community Historian Guide • Heritage Parsi Bungalow Lodging • Private AC Chauffeur</span>
+            </div>
+
+            <div class="dest-highlights">
+            <span class="highlight-tag">♦ Udvada Atash Behram (India) pilgrimage</span>
+            <span class="highlight-tag">♦ Yazd Historic Fire Temple (Iran) sacred flame</span>
+            <span class="highlight-tag">♦ Chak Chak desert mountain sanctuary</span>
+            </div>
+
+            <div class="dest-card-actions">
+              <a class="btn primary sm" href="destination-detail.html?id=11">Detailed Pilgrim Dossier →</a>
+              <a class="btn secondary sm" href="contact.html?interest=Enquiry%20for%20Bespoke%20Historic%20Zoroastrian%20Fire%20Temples%20%26%20Towers%20Tour">Request Proposal</a>
+            </div>
+          </div>
+        </article>
+      </div>

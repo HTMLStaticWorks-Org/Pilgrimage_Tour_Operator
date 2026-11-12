@@ -448,6 +448,261 @@ p {
   background: linear-gradient(135deg, rgba(16, 12, 8, 0.88) 0%, rgba(32, 24, 14, 0.78) 55%, rgba(16, 12, 8, 0.92) 100%),
               url('assets/images/hero-classic.jpg') center/cover no-repeat;
   color: #fffef8;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-classic .hero-copy {
+  max-width: 680px;
+}
+
+/* ==========================================================================
+   Hero Classic - Pilgrim Traveler Stage & Showcase Card
+   ========================================================================== */
+
+.hero-classic-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-traveler-stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+.traveler-showcase-card {
+  position: relative;
+  background: radial-gradient(circle at 50% 25%, rgba(255, 238, 204, 0.16) 0%, rgba(20, 15, 10, 0.78) 75%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(231, 200, 121, 0.42);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px 22px;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.65), 0 0 40px rgba(231, 200, 121, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.traveler-showcase-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(231, 200, 121, 0.75);
+  box-shadow: 0 30px 64px rgba(0, 0, 0, 0.75), 0 0 50px rgba(231, 200, 121, 0.25);
+}
+
+/* Ambient Sacred Aura glow behind traveler */
+.traveler-aura {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(231, 200, 121, 0.32) 0%, rgba(184, 139, 54, 0.14) 50%, transparent 72%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(22px);
+}
+
+/* Floating status chip */
+.traveler-chip {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(18, 14, 9, 0.88);
+  border: 1px solid rgba(231, 200, 121, 0.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.chip-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  animation: chipPulse 2s infinite;
+}
+
+@keyframes chipPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+  }
+}
+
+/* Interactive Style Toggle */
+.traveler-style-toggle {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 14, 9, 0.82);
+  border: 1px solid rgba(231, 200, 121, 0.35);
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ede2cf;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.traveler-style-toggle:hover {
+  background: rgba(35, 27, 16, 0.95);
+  border-color: var(--gold-light);
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+.traveler-style-toggle .toggle-icon {
+  color: var(--gold-light);
+  font-size: 11px;
+}
+
+/* Figure & Trail */
+.traveler-figure-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0 4px;
+}
+
+.traveler-image {
+  position: relative;
+  z-index: 2;
+  width: 250px;
+  max-width: 82%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.65));
+  user-select: none;
+  transition: filter 0.3s ease;
+}
+
+/* Walking Path / Sacred Trail */
+.traveler-trail {
+  position: relative;
+  z-index: 1;
+  width: 92%;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.trail-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(231, 200, 121, 0.3) 15%, rgba(231, 200, 121, 0.8) 50%, rgba(231, 200, 121, 0.3) 85%, transparent 100%);
+  border-top: 1px dashed rgba(231, 200, 121, 0.75);
+}
+
+.trail-waypoint {
+  position: relative;
+  z-index: 2;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #f7eedf;
+  background: rgba(22, 17, 12, 0.92);
+  border: 1px solid rgba(231, 200, 121, 0.35);
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(4px);
+}
+
+.trail-waypoint.active {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+  box-shadow: 0 0 10px rgba(231, 200, 121, 0.35);
+}
+
+/* Bottom Feature Footer */
+.traveler-card-footer {
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(231, 200, 121, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 12px;
+}
+
+.traveler-stat strong {
+  display: block;
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  color: var(--gold-light);
+  line-height: 1.2;
+}
+
+.traveler-stat small {
+  display: block;
+  font-size: 11px;
+  color: #ede2cf;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+.traveler-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(231, 200, 121, 0.25);
+}
+
+/* RTL & Dark Mode Support for Traveler Card */
+html[dir="rtl"] .traveler-image {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .traveler-chip {
+  right: auto;
+  left: 16px;
+}
+
+html[dir="rtl"] .traveler-style-toggle {
+  left: auto;
+  right: 16px;
+}
+
+body.dark .traveler-showcase-card {
+  background: radial-gradient(circle at 50% 25%, rgba(255, 238, 204, 0.08) 0%, rgba(14, 11, 8, 0.88) 75%);
+  border-color: rgba(231, 200, 121, 0.32);
 }
 
 .hero-classic .eyebrow,
@@ -570,13 +825,40 @@ p {
 }
 
 @media (max-width: 960px) {
+  .hero-classic,
   .premium-hero {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
+  .hero-traveler-stage {
+    max-width: 380px;
+    margin: 10px auto 0;
+  }
+
   .hero-featured-image {
     height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .traveler-showcase-card {
+    padding: 24px 16px 16px;
+  }
+
+  .traveler-image {
+    width: 210px;
+  }
+
+  .traveler-chip,
+  .traveler-style-toggle {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .trail-waypoint {
+    font-size: 9.5px;
+    padding: 2px 6px;
   }
 }
 
@@ -1930,6 +2212,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  align-items: stretch;
 }
 
 .hub-card {
@@ -1941,7 +2224,7 @@ p {
   flex-direction: column;
   box-shadow: var(--shadow-sm);
   height: 100%;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hub-card:hover {
@@ -1958,29 +2241,70 @@ p {
   padding: 3px 8px;
   border-radius: 4px;
   display: inline-block;
+  align-self: flex-start;
   margin-bottom: 10px;
   border: 1px solid var(--line);
+  letter-spacing: 0.5px;
 }
 
 .hub-card h3 {
   font-size: 18px;
   font-family: "Playfair Display", serif;
   margin-bottom: 8px;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .hub-card p {
   font-size: 13px;
-  margin-bottom: 14px;
-  flex: 1;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  min-height: 82px;
+  color: var(--ink);
 }
 
 .hub-contact {
   font-size: 12px;
   color: var(--ink-secondary);
   border-top: 1px solid var(--line);
-  padding-top: 12px;
+  padding-top: 14px;
   margin-top: auto;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 88px;
+}
+
+.hub-contact-row {
+  display: block;
+  line-height: 1.45;
+}
+
+.hub-contact-row.hub-hours {
+  min-height: 36px;
+}
+
+.hub-contact-row.hub-languages {
+  min-height: 36px;
+}
+
+.hub-contact-row strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hub-contact-row span {
+  color: var(--ink-secondary);
+}
+
+body.dark .hub-contact-row strong {
+  color: #eeddbb;
+}
+
+body.dark .hub-contact-row span {
+  color: var(--muted);
 }
 
 /* 20. Pathway Grid (Contact Unique Section 2) */
